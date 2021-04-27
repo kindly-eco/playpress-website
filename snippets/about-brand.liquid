@@ -28,6 +28,6 @@
     </article>
   </div>
   {% if settings.show_link == true %}
-    <a is="signpost" href="about.html">Learn more about Playpress!</a>
+    <a is="signpost" href="{{ settings.link_url | escape }}">{{ settings.link_text | escape }}</a>
   {% endif %}
 </aside>

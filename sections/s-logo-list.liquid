@@ -1,24 +1,30 @@
-<div class="page-width">
+<section is="partners">
   {% if section.settings.title != blank %}
-    <div class="section-header text-center">
-      <h2>{{ section.settings.title | escape }}</h2>
-    </div>
+    <h2>{{ section.settings.title | escape }}</h2>
+  {% endif %}
+  {% if section.settings.text != blank %}
+    <p>{{ section.settings.text }}</p>
   {% endif %}
 
   {% if section.blocks.size > 0 %}
-    <ul class="logo-bar{% if section.settings.title_enable %} logo-bar--large{% endif %}">
+    <ul is="logos">
       {% for block in section.blocks %}
-        <li class="logo-bar__item{% if section.settings.title_enable %} logo-bar__item--large{% endif %}" {{ block.shopify_attributes }}>
+        <li>
           {% if block.settings.link != blank %}
-            <a href="{{ block.settings.link }}" class="logo-bar__link">
+            <a href="{{ block.settings.link }}">
           {% endif %}
           {% if block.settings.image != blank %}
-            {{ block.settings.image | img_url: '160x160', scale: 2 | img_tag: block.settings.image.alt, 'logo-bar__image' }}
+            <img src="{{ block.settings.image | img_url: '200x200' }}" class="{{ block.settings.image_size }}" alt="" />
           {% else %}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
           {% endif %}
           {% if block.settings.link != blank %}
             </a>
+          {% endif %}
+          {% if block.settings.logo_text != blank %}
+              <span {% if block.settings.show_logo_text == false %} class="visually-hidden"{% endif %}>
+                {{ block.settings.logo_text }}
+              </span>
           {% endif %}
         </li>
       {% endfor %}
@@ -28,7 +34,14 @@
   {% if section.blocks.size == 0 %}
     {% include 'no-blocks' %}
   {% endif %}
-</div>
+
+  {% if section.settings.show_signpost_link %}
+  <a is="signpost" href="{{ section.settings.link_url }}" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
+    {{ section.settings.link_text }}
+  </a>
+{% endif %}
+
+  </section>
 
 {% schema %}
 {
@@ -41,6 +54,29 @@
       "id": "title",
       "label": "Heading",
       "default": "Logo list"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "info": "Optional"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_signpost_link",
+      "label": "Show 'View more' link",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text",
+      "default": "View more"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
     }
   ],
   "blocks": [
@@ -52,6 +88,29 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "image_size",
+          "label": "Logo size",
+          "options": [
+            { "value": "small", "label": "Small"},
+            { "value": "medium", "label": "Medium"},
+            { "value": "large", "label": "Large"}
+          ],
+          "default": "medium"
+       },
+        {
+          "type": "checkbox",
+          "id": "show_logo_text",
+          "label": "Show logo text?",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "logo_text",
+          "label": "Logo text",
+          "default": "Logo text or name"
         },
         {
           "type": "url",

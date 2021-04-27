@@ -1,51 +1,47 @@
 <section is="hero">
   {%- if section.settings.heading != blank -%}
-  <h1>{{ section.settings.heading | escape }}</h1>
-  {%- endif -%} {%- if section.settings.text != blank -%}
-  <p is="lede">{{ section.settings.text }}</p>
-  {%- endif -%} {%- if section.settings.image == blank -%}
-  <div class="placeholder-background">
+    <h1>{{ section.settings.heading | escape }}</h1>
+  {%- endif -%}
+  {%- if section.settings.text != blank -%}
+    <p is="lede">{{ section.settings.text }}</p>
+  {%- endif -%}
+  {%- if section.settings.image == blank -%}
     {{ "lifestyle-1" | placeholder_svg_tag: "placeholder-svg" }}
-  </div>
   {%- else -%}
-  <img
-    src="{{ section.settings.image | img_url: 'master' }}"
-    alt="Child playing with toyset"
-    width="900"
-    height="600"
-    is="in-action"
-  />
+    <img
+      src="{{ section.settings.image | img_url: 'master' }}"
+      alt=""
+      width="900"
+      height="600"
+      is="in-action"
+    />
   {%- endif -%}
 </section>
 
-{% schema %} 
-{ 
-  "name": "Hero", 
-  "settings": [ 
-    { 
-    "id": "heading", 
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+    "id": "heading",
     "type": "text",
-    "label": "Heading" 
-    }, 
-    { 
+    "label": "Heading"
+    },
+    {
       "id": "text",
       "type": "text",
-      "label": "Text" 
+      "label": "Text"
     },
-    { 
+    {
       "id": "image",
       "type": "image_picker",
       "label": "Image"
-    } 
-  ], 
-  "presets": [ 
-    { "name": {
-      "en": "Hero" }, 
-      "category": { 
-        "en": "Image" 
-      } 
-    } 
-  ] 
-} 
-
+    }
+  ],
+  "presets": [
+    { "name": "Hero",
+      "category": "Image"
+    }
+  ]
+}
 {% endschema %}

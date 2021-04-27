@@ -1,15 +1,13 @@
 <article is="promo">
-  <a class="product-card" href="{{ product.url | within: collection }}">
-    <img src="{{ product.featured_image.src | img_url: '1024x' }}" alt="">
+  <a href="{{ product.url | within: collection }}">
+    <img
+    src="{{ product.featured_media | img_url: '800x' }}"
+    alt=""
+    is="in-action"
+    />
+  <div is="product-meta">
     <h3>{{ product.title }}</h3>
-    <p>
-      {%- if product.price_varies -%}
-        <span class="visuallyhidden">Starting at</span>
-        {{ product.price_min | money_without_trailing_zeros }}
-        <span class="visuallyhidden">to</span>
-      {%- else -%}
-        {{ product.price | money_without_trailing_zeros }}
-      {%- endif -%}
-    </p>
+    {% include 'product-price-listing', product: product, show_vendor: show_vendor %}
+  </div>
   </a>
 </article>

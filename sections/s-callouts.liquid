@@ -1,26 +1,20 @@
   {% if section.settings.title != blank %}
       <h2>{{ section.settings.title | escape }}</h2>
   {% endif %}
+  {% if section.settings.text != blank %}
+      <p>{{ section.settings.text | escape }}</p>
+  {% endif %}
 
   <div is="call-outs">
     {% for block in section.blocks %}
       <article is="call-out">
         {% if block.settings.enable_image %}
           {% if block.settings.image != blank %}
-            {% capture img_id %}TextColumnImage-{{ block.id }}{% endcapture %}
-            {% capture wrapper_id %}TextColumnImageWrapper-{{ block.id }}{% endcapture %}
-                <img id="{{ img_id }}"
-                     class="feature-row__image lazyload"
-                     data-src="{{ img_url }}"
-                     data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                     data-aspectratio="{{ block.settings.image.aspect_ratio }}"
-                     data-sizes="auto"
-                     alt="{{ block.settings.image.alt | escape }}">
-            <noscript>
-              <p>
-                {{ block.settings.image | img_url: '480x480', scale: 2 | img_tag: block.settings.image.alt, 'feature-row__image' }}
-              </p>
-            </noscript>
+                <img
+                src="{{ block.settings.image | img_url: '800x' }}"
+                alt=""
+                is="in-action"
+                />
           {% else %}
             <p>
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -41,6 +35,11 @@
     {% include 'no-blocks' %}
   {% endif %}
 
+  {% if section.settings.show_signpost_link %}
+      <a is="signpost" href="{{ section.settings.link_url }}" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
+        {{ section.settings.link_text }}
+      </a>
+  {% endif %}
 
 {% schema %}
 {
@@ -54,10 +53,27 @@
       "default": "Callout blocks of information"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "text",
       "label": "Text",
       "default": "Text to introduce this section of content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_signpost_link",
+      "label": "Show 'View more' link",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text",
+      "default": "View more"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
     }
   ],
   "blocks": [
