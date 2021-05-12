@@ -8,7 +8,7 @@
   ],
   "rules": {
     "alpha-value-notation": "percentage",
-    "at-rule-allowed-list": ["font-face", "supports", "media"],
+    "at-rule-allowed-list": ["font-face", "import", "supports", "media"],
     "at-rule-no-vendor-prefix": true,
     "color-function-notation": "modern",
     "color-named": "never",
@@ -172,7 +172,25 @@
     ],
     "scales/sizes": [
       {
-        "scale": [0.125, 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 5, 6, 8, 10, 40, 30, 50, 90],
+        "scale": [
+          0.125,
+          0.25,
+          0.5,
+          0.75,
+          1,
+          1.5,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          40,
+          30,
+          50,
+          90
+        ],
         "units": ["rem"]
       },
       {

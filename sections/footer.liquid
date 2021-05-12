@@ -1,10 +1,7 @@
-    <footer role="contentinfo">
+    <footer is="footer" role="contentinfo">
       <div>
         {% include 'site-nav', linklist: section.settings.footer_linklist %}
-        <dark-mode-toggle
-          id="dark-mode-toggle"
-          label="Dark mode"
-        ></dark-mode-toggle>
+        <dark-mode-toggle id="dark-mode-toggle" label="Dark mode"></dark-mode-toggle>
         {{ section.settings.feedback_text }}
 
         {%- if section.blocks.size > 0 -%}
@@ -22,26 +19,13 @@
         {%- endif -%}
 
         <p>
-          This website is eco-friendly like our playsets. It was crafted that
-          way by
-          <a href="https://www.kindly.eco">Kindly</a>.
+          This website was crafted by <a href="https://www.kindly.eco">Kindly</a> to be eco-friendly.
         </p>
         <p>
-          <small>By using this website, you agree to our use of cookies.</small>
           <small>Copyright 2020 Playpress</small>
         </p>
       </div>
     </footer>
-
-    {% style %}
-    @media (min-width: 64em) {
-      footer[role="contentinfo"] div {
-        background-image: url("{{ section.settings.footer_image | img_url: 'master' }}");
-      }
-    }
-
-    {% endstyle %}
-
     {% schema %}
     {
     "name": "Footer",

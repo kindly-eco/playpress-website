@@ -12,7 +12,7 @@
   }
 </style>
 
-<main is="product">
+<article is="product">
   {% comment %}
     Get first variant, or deep linked one
   {% endcomment %}
@@ -20,17 +20,13 @@
   {%- assign compare_at_price = current_variant.compare_at_price -%}
   {%- assign price = current_variant.price -%}
 
-  {%- assign featured_image = product.featured_image -%}
-  <img src="{{ featured_image | img_url: '800x'}}" alt="{{ featured_image.alt | escape }}">
-
-        <h1 class="visually-hidden">{{ product.title }}</h1>
 
         {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
 
         <fieldset>
-          <legend>{{ product.title }}</legend>
-            <label for="Quantity-{{ section.id }}">{{ product.price | money }} x</label>
-            <input type="number" id="Quantity-{{ section.id }}" name="quantity" value="1" min="1" pattern="[0-9]*" data-quantity-input>
+            <div><h1>{{ product.title }}</h1></div>
+            <input type="hidden" id="Quantity-{{ section.id }}" name="quantity" value="1">
+            <p>{{ product.price | money }}</p>
             <button type="submit" {% unless product.available %} disabled="disabled"{% endunless %}>
             {%- if product.available -%}
               Add to Cart
@@ -39,10 +35,13 @@
             {%- endif -%}
             </button>
             {{ form | payment_button }}
-            <p><em>We ship worldwide - UK orders are free of charge.</em></p>
         </fieldset>
 
         {% endform %}
+
+        {%- assign featured_image = product.featured_image -%}
+        <img src="{{ featured_image | img_url: '800x'}}" alt="{{ featured_image.alt | escape }}">
+
 
         {%- comment -%}
           Live region for announcing updated price and availability to screen readers
@@ -85,6 +84,7 @@
           {{ product.description }}
         </div>
 
+
         {% if section.settings.show_testimonial %}
           <h2>Love for the Gruffalo playset</h2>
           <div is="call-out" class="testimonial"> <img src="https://via.placeholder.com/120x120.webp?text=Customer photo" alt="Customer photo" width="120" height="120"> <div> <blockquote> Absolutely love this play set. It was soooo easy to pop out the pieces and build the Gruffalo "nest" as my 5 year old likes to call it. Also love that it's plastic-free!! </blockquote> <cite>Jemma, London</cite> </div> </div>
@@ -101,7 +101,9 @@
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
         {% endif %}
 
-</main>
+          <p is="delivery"> <svg fill="none" width="30" height="27" viewBox="0 0 30 27"> <path fill="hsl(var(--sea-1))" d="M22.7 17.8a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6zm0 5.7a1.9 1.9 0 110-3.8 1.9 1.9 0 010 3.8zm-13-5.7a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6zm0 5.7a1.9 1.9 0 110-3.8 1.9 1.9 0 010 3.8zM25.2 7a.9.9 0 00-.8-.5h-5v1.9h4.4l2.6 5 1.7-.7L25.2 7z"></path> <path fill="hsl(var(--sea-1))" d="M12.7 20.7h7.1v2h-7.1v-2zm-5.8 0H3.6a1 1 0 000 2H7a1 1 0 000-2zm23-5.8l-2-2.4a1 1 0 00-.7-.3h-6.9V5.6c0-.6-.4-1-1-1H3.7a1 1 0 000 1.9h14.9v6.6c0 .6.4 1 .9 1h7.3l1.4 1.7v4.9h-2.6a1 1 0 000 2H29c.5 0 .9-.6.9-1v-6.2c0-.2 0-.4-.2-.6zm-23 1H2.5a1 1 0 000 2h4.4a1 1 0 000-2zM9 12.2H1A1 1 0 001 14h8a1 1 0 000-2z"></path> <path fill="hsl(var(--sea-1))" d="M10.5 8.5h-8a1 1 0 000 1.9h8a1 1 0 000-1.9z"></path> </svg> <em>We deliver worldwide - UK orders are free of charge.</em> </p>
+
+          </article>
 
 {% if section.settings.show_about %}
   {% include 'about-brand' %}
@@ -117,33 +119,32 @@
 {% endunless %}
 
 {% schema %}
+
 {
-  "name": "Product Content",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_share_buttons",
-      "label": "Show social sharing buttons",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_testimonial",
-      "label": "Show testimonial",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "show_instagram",
-      "label": "Show instagram feed",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "show_about",
-      "label": "Show information about Playpress",
-      "default": true
-    }
-  ]
+    "name": "Product Content",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_share_buttons",
+            "label": "Show social sharing buttons",
+            "default": true
+        }, {
+            "type": "checkbox",
+            "id": "show_testimonial",
+            "label": "Show testimonial",
+            "default": false
+        }, {
+            "type": "checkbox",
+            "id": "show_instagram",
+            "label": "Show instagram feed",
+            "default": false
+        }, {
+            "type": "checkbox",
+            "id": "show_about",
+            "label": "Show information about Playpress",
+            "default": true
+        }
+    ]
 }
+
 {% endschema %}

@@ -1,0 +1,5 @@
+div[is="proceed-to-checkout"] {
+  background-color: hsl(var(--background));
+  margin-block-start: 1rem;
+  padding: 1rem;
+}

@@ -1,0 +1,17 @@
+p[is="delivery"] {
+  background-color: hsl(var(--triadic));
+  border-radius: 0.5rem;
+  color: hsl(var(--on-triadic));
+  display: flex;
+  margin-block-end: 0;
+  max-inline-size: 100%;
+  padding: 2rem;
+
+  & > svg {
+    margin-inline-end: 0.5rem;
+  }
+
+  & > a {
+    color: hsl(var(--on-triadic));
+  }
+}

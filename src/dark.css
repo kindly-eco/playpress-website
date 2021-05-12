@@ -46,10 +46,14 @@
   --hero: var(--sea-16);
   --on-hero: var(--charcoal-1-5);
   --call-out: var(--sea-16);
-  --call-out-separator: var(--sea-12);
+  --call-outs: var(--sea-12);
   --product: var(--sea-16);
   --pete: var(--sea-6);
   --pete-drop: var(--sea-16);
   --about-background: var(--sea-16);
   --about-elevated: var(--sea-12);
+}
+
+img {
+  filter: brightness(0.8) contrast(1.2);
 }

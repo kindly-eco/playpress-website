@@ -1,0 +1,36 @@
+ul[is="logos"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  list-style: none;
+  padding-inline-start: 0;
+
+  & > li {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-block: 0.5rem;
+    margin-block-end: 1rem;
+    padding-inline: 1rem;
+    text-align: center;
+
+    & > img {
+      justify-self: center;
+      margin-block-end: 1rem;
+
+      &.small {
+        max-inline-size: 6rem;
+      }
+
+      &.medium {
+        max-inline-size: 8rem;
+      }
+
+      &.large {
+        max-inline-size: 10rem;
+      }
+    }
+
+    & > span {
+      align-self: end;
+    }
+  }
+}

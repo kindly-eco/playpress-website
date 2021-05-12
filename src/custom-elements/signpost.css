@@ -1,0 +1,52 @@
+a[is="signpost"] {
+  display: inline-block;
+  font-size: 1.17em;
+  font-weight: 700;
+  margin-block: 0.75rem;
+  padding-inline-start: 1.5rem;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    inset-block-start: 0.25rem;
+    inset-inline-start: 0;
+    line-height: 1;
+    position: absolute;
+    text-decoration: none;
+  }
+
+  &::before {
+    background-color: currentColor;
+    block-size: 1rem;
+    border-radius: 0.125rem;
+    inline-size: 1rem;
+    inset-block-start: 0.25rem;
+    inset-inline-start: 0;
+  }
+
+  &::after {
+    background: hsl(var(--on-complementary));
+    block-size: 0.75rem;
+    clip-path: polygon(
+      0 3%,
+      2% 0,
+      22% 0,
+      30% 2%,
+      100% 48%,
+      100% 52%,
+      30% 98%,
+      22% 100%,
+      2% 100%,
+      0 97%,
+      70% 52%,
+      70% 48%
+    );
+    content: "";
+    display: inline-block;
+    inline-size: 0.5rem;
+    inset-block-start: calc(0.25rem + 2px);
+    inset-inline-start: 0.25rem;
+    line-height: 1;
+  }
+}

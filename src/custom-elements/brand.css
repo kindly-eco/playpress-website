@@ -1,0 +1,27 @@
+section[is="brand"] {
+  display: grid;
+  margin-block-end: 4rem;
+  margin-block-start: 2rem;
+
+  @media (min-width: 50em) {
+    grid-column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    & > div {
+      align-self: center;
+      grid-column: 2;
+      grid-row: span 2;
+
+      & > h3 {
+        margin-block-start: 0;
+      }
+    }
+
+    & > img {
+      align-self: center;
+      grid-column: 1;
+      grid-row: span 2 / -1;
+    }
+  }
+}

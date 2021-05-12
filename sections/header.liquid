@@ -1,4 +1,4 @@
-<header role="banner">
+<header is="header" role="banner">
   <a href="{{ routes.root_url }}" aria-label="Playpress">
     {% include 'site-logo' %}
   </a>
@@ -7,7 +7,7 @@
   </nav>
   <p>
     <a href="/cart">
-    <strong>{{ cart.item_count }}</strong> Basket {% if cart.item_count > 0 %}  {{ cart.total_price | money_without_currency }} {% endif %}</a>
+    <strong>{{ cart.item_count }}</strong> Basket {{ cart.total_price | money }} </a>
   </p>
 </header>
 

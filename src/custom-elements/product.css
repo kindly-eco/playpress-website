@@ -1,0 +1,80 @@
+article[is="product"] {
+  & > img:first-of-type {
+    margin-block: 1rem;
+  }
+
+  & > form {
+    background-color: hsl(var(--product));
+    inset-block-start: 0;
+    inset-inline: 0;
+    margin-block: 0;
+    margin-inline: -1rem;
+    padding: 0 1rem 1rem;
+    position: sticky;
+    z-index: 1;
+
+    & > fieldset {
+      & > div {
+        & > h1 {
+          font-size: 2em;
+          margin-block: 0.28em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      & > p {
+        display: inline;
+        line-height: 2rem;
+      }
+
+      & > button {
+        display: inline;
+        float: inline-end;
+      }
+    }
+  }
+
+  @media (min-width: 40em) {
+    align-items: start;
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 2fr 1fr;
+
+    & > * {
+      grid-column: 1;
+    }
+
+    & > form {
+      border-radius: 0.5rem;
+      grid-column: 2;
+      grid-row: 1;
+      inset-block-start: 1rem;
+      margin-inline: 0;
+
+      & > fieldset {
+        & > div {
+          & > h1 {
+            overflow: visible;
+            white-space: normal;
+          }
+        }
+
+        & > p {
+          margin-block-start: 0;
+        }
+
+        & > p,
+        & > button {
+          display: block;
+          float: none;
+        }
+      }
+    }
+
+    & > img:first-of-type {
+      margin-block: 0;
+    }
+  }
+}

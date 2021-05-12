@@ -1,0 +1,7 @@
+div[is="shop-intro"] {
+  @media (min-width: 40em) {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,3 +1,4 @@
+<div is="call-outs">
   {% if section.settings.title != blank %}
       <h2>{{ section.settings.title | escape }}</h2>
   {% endif %}
@@ -5,7 +6,7 @@
       <p>{{ section.settings.text | escape }}</p>
   {% endif %}
 
-  <div is="call-outs">
+
     {% for block in section.blocks %}
       <article is="call-out">
         {% if block.settings.enable_image %}
@@ -29,7 +30,7 @@
         {% endif %}
         </article>
     {% endfor %}
-  </div>
+
 
   {% if section.blocks.size == 0 %}
     {% include 'no-blocks' %}
@@ -40,6 +41,8 @@
         {{ section.settings.link_text }}
       </a>
   {% endif %}
+
+</div>
 
 {% schema %}
 {
