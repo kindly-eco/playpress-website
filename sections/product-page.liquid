@@ -84,19 +84,6 @@
           {{ product.description }}
         </div>
 
-
-        {% if section.settings.show_testimonial %}
-          <h2>Love for the Gruffalo playset</h2>
-          <div is="call-out" class="testimonial"> <img src="https://via.placeholder.com/120x120.webp?text=Customer photo" alt="Customer photo" width="120" height="120"> <div> <blockquote> Absolutely love this play set. It was soooo easy to pop out the pieces and build the Gruffalo "nest" as my 5 year old likes to call it. Also love that it's plastic-free!! </blockquote> <cite>Jemma, London</cite> </div> </div>
-        {% endif %}
-
-        {% if section.settings.show_instagram %}
-        <h3>Playpressers on Instagram</h3>
-        <p> Use the hashtag #playpress to feature on our profile and share your fun!</p>
-          <ul is="photo-stream">
-            <li> <img src="https://via.placeholder.com/100x100.webp?text=Instagram photo" alt="Instagram customer" width="200" height="200" loading="lazy"> </li> <li> <img src="https://via.placeholder.com/200x200.webp?text=Instagram photo" alt="Instagram customer" width="200" height="200" loading="lazy"> </li> <li> <img src="https://via.placeholder.com/200x200.webp?text=Instagram photo" alt="Instagram customer" width="200" height="200" loading="lazy"> </li> <li> <img src="https://via.placeholder.com/200x200.webp?text=Instagram photo" alt="Instagram customer" width="200" height="200" loading="lazy"> </li> </ul>
-        {% endif %}
-
         {% if section.settings.show_share_buttons %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
         {% endif %}
@@ -128,16 +115,6 @@
             "id": "show_share_buttons",
             "label": "Show social sharing buttons",
             "default": true
-        }, {
-            "type": "checkbox",
-            "id": "show_testimonial",
-            "label": "Show testimonial",
-            "default": false
-        }, {
-            "type": "checkbox",
-            "id": "show_instagram",
-            "label": "Show instagram feed",
-            "default": false
         }, {
             "type": "checkbox",
             "id": "show_about",
