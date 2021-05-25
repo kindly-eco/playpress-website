@@ -1,4 +1,4 @@
-article[is="product-promo"] {
+article[is="promo"] {
   display: block;
 
   & > a {

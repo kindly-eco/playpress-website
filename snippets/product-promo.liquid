@@ -1,11 +1,13 @@
-<article is="promo">
+<article is="product-promo">
+  <a href="{{ product.url | within: collection }}">
+    <h3>{{ product.title }}</h3>
+  </a>
   <a href="{{ product.url | within: collection }}">
     <img
     src="{{ product.featured_media | img_url: '800x' }}"
     alt=""
     is="in-action"
     />
-  <h3>{{ product.title }}</h3>
-  {% include 'product-price-listing', product: product, show_vendor: show_vendor %}
   </a>
+  <p>{{ product.price | money }}</p>
 </article>

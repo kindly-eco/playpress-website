@@ -1,6 +1,17 @@
     <footer is="footer" role="contentinfo">
       <div>
-        {% include 'site-nav', linklist: section.settings.footer_linklist %}
+        <ul>
+          {% for link in linklists[section.settings.footer_linklist].links %}
+          <li {% if link.active %} class="on"{% endif %}>
+                <a href="{{ link.url }}"
+                  class="{% if link.active %} active{% endif %}"
+                  {% if link.current %} aria-current="page"{% endif %}
+                >{{ link.title }}
+                </a>
+              </li>
+          {% endfor %}
+        </ul>
+
         <dark-mode-toggle id="dark-mode-toggle" label="Dark mode"></dark-mode-toggle>
         {{ section.settings.feedback_text }}
 

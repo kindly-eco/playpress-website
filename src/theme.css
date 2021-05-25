@@ -4,7 +4,7 @@
 @import "custom-elements/about.css";
 @import "custom-elements/basket.css";
 @import "custom-elements/benefits.css";
-@import "custom-elements/brand.css";
+@import "custom-elements/image-with-text.css";
 @import "custom-elements/breadcrumbs.css";
 @import "custom-elements/call-out.css";
 @import "custom-elements/call-outs.css";
@@ -23,13 +23,15 @@
 @import "custom-elements/hint.css";
 @import "custom-elements/in-action.css";
 @import "custom-elements/lede.css";
+@import "custom-elements/logo-list.css";
 @import "custom-elements/logos.css";
 @import "custom-elements/menu.css";
 @import "custom-elements/pagination.css";
-@import "custom-elements/partners.css";
 @import "custom-elements/people.css";
 @import "custom-elements/photo-stream.css";
 @import "custom-elements/proceed-to-checkout.css";
+@import "custom-elements/product-promo.css";
+@import "custom-elements/product-promos.css";
 @import "custom-elements/product.css";
 @import "custom-elements/promo.css";
 @import "custom-elements/promos.css";

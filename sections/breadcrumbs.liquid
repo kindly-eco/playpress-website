@@ -1,56 +1,17 @@
-<style>
-  ul[is=breadcrumbs] {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-ul[is=breadcrumbs] li:not(:last-of-type) {
-    display: none;
-}
-@media (min-width: 26rem) {
-  ul[is=breadcrumbs] li:not(:last-of-type) {
-    display: flex;
-  }
-}
-ul[is=breadcrumbs] li {
-  display: flex;
-  list-style: none;
-}
-ul[is=breadcrumbs] li:before {
-  background-color: hsl(var(--text)/50%);
-  height: .75rem;
-  -webkit-clip-path: polygon(0 3%,2% 0,22% 0,30% 2%,100% 48%,100% 52%,30% 98%,22% 100%,2% 100%,0 97%,70% 52%,70% 48%);
-  clip-path: polygon(0 3%,2% 0,22% 0,30% 2%,100% 48%,100% 52%,30% 98%,22% 100%,2% 100%,0 97%,70% 52%,70% 48%);
-  content: "";
-  width: .5rem;
-  top: .5rem;
-  margin-right: .5rem;
-  position: relative;
-  transform: rotate(180deg);
-}
-@media (min-width: 26rem) {
-  ul[is=breadcrumbs] li:not(:first-of-type):before {
-    margin-left: .5rem;
-    transform: rotate(0deg);
-  }
-}
-</style>
-
 {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
-{%- assign t = template | split: '.' | first -%}
+  {%- assign t = template | split: '.' | first -%}
 
-<nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
-  <ul is="breadcrumbs" class="breadcrumbs__list">
-    <li class="breadcrumbs__item">
-      <a class="breadcrumbs__link" href="/">Home</a>
-    </li>
-    {%- case t -%}
-      {%- when 'product' -%}
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="/pages/shop" aria-current="page">Shop</a>
-        </li>
-    {%- endcase -%}
-  </ul>
-</nav>
+  <nav>
+    <ul is="breadcrumbs">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      {%- case t -%}
+        {%- when 'product' -%}
+          <li>
+            <a href="/pages/shop" aria-current="page">Shop</a>
+          </li>
+      {%- endcase -%}
+    </ul>
+  </nav>
 {%- endunless -%}

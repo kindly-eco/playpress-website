@@ -1,3 +1,4 @@
+<section is="product-promos">
   {% if section.settings.title != blank %}
       <h2>{{ section.settings.title | escape }}</h2>
   {% endif %}
@@ -18,22 +19,10 @@
 
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
-    <div is="promos" class="{{ grid_row }}">
+    <div is="product-promos" class="{{ grid_row }}">
     {% for product in collection.products limit: product_limit %}
-        {% include 'product-card', product: product %}
-    {% else %}
-    {% for i in (1..product_limit) %}
-      <article is="product-promo">
-        <a href="#">
-          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-          {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
-        <h3>{{ 'homepage.onboarding.product_title' | t }}</h3>
-        {% include 'product-price' %}
-        </a>
-      </article>
-      {% endfor %}
+        {% include 'product-promo', product: product %}
     {% endfor %}
-    </ul>
     </div>
 
   {% if section.settings.show_signpost_link %}
@@ -41,17 +30,18 @@
         {{ section.settings.link_text }}
       </a>
   {% endif %}
+</section>
 
 {% schema %}
 {
-  "name": "Featured collection",
+  "name": "Featured products",
   "class": "index-section",
   "settings": [
     {
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "Featured collection"
+      "default": "Featured products"
     },
     {
       "type": "textarea",
@@ -102,7 +92,7 @@
   ],
   "presets": [
     {
-      "name": "Products Collection",
+      "name": "Products",
       "category": "Product"
     }
   ]
