@@ -1,37 +1,53 @@
 article[is="product"] {
+  margin-block-start: 2rem;
+
+  & > h1 {
+    margin-block-start: 0;
+  }
+
   & > img:first-of-type {
     margin-block: 1rem;
   }
 
   & > form {
     background-color: hsl(var(--product));
+    display: grid;
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto);
     inset-block-start: 0;
     inset-inline: 0;
     margin-block: 0;
     margin-inline: -1rem;
-    padding: 0 1rem 1rem;
+    padding: 1rem 1rem 0.5rem;
     position: sticky;
     z-index: 1;
 
-    & > fieldset {
-      & > div {
-        & > h1 {
-          font-size: 2em;
-          margin-block: 0.28em;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
+    & > p {
+      margin: 0;
+
+      &:last-of-type {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-self: center;
       }
+    }
+
+    & > button {
+      inline-size: 100%;
+      max-inline-size: 100%;
+    }
+
+    @media (min-width: 40em) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      padding: 1rem;
 
       & > p {
-        display: inline;
-        line-height: 2rem;
-      }
-
-      & > button {
-        display: inline;
-        float: inline-end;
+        &:last-of-type {
+          grid-row: 3;
+          margin-block-start: 0.48em;
+        }
       }
     }
   }
@@ -49,7 +65,7 @@ article[is="product"] {
     & > form {
       border-radius: 0.5rem;
       grid-column: 2;
-      grid-row: 1;
+      grid-row: 1 / span 2;
       inset-block-start: 1rem;
       margin-inline: 0;
 

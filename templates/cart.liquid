@@ -1,21 +1,59 @@
+<h1>Your cart</h1>
+
 {%- if cart.item_count > 0 -%}
 
-<form action="/cart" method="post">
+  <form action="/cart" method="post" is="cart">
 
-  {%- for item in cart.items -%}
-    <a href="{{ item.url | within: collections.all }}">
-      <img src="{{ item | img_url: '200x200' }}" alt="{{ item.image.alt | escape }}">
-      {{ item.product.title }}
-    </a>
-
-    <p>
-      <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">Remove</a>
-    </p>
-  {%- endfor -%}
-
-  <input type="submit" name="checkout" value="Checkout">
-</form>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for item in cart.items -%}
+          <tr>
+            <td>
+              <a href="{{ item.url | within: collections.all }}">
+                <img
+                  src="{{ item | img_url: '200x200' }}"
+                  alt="{{ item.image.alt | escape }}"
+                  width="100"
+                  height="100">
+                  {{ item.product.title }}
+              </a>
+            </td>
+            <td>{{ item.price | money }}</td>
+            <td>
+              <input type="number"
+                name="updates[]"
+                size="2"
+                id="updates_{{ item.id }}"
+                value="{{ item.quantity }}" />
+            </td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">Total</th>
+          <td>{{cart.total_price | money }}</td>
+          <td colspan="2"><button is="command" type="submit">Update</button></td>
+        </tr>
+      </tfoot>
+    </table>
+    <div is="proceed-to-checkout">
+      <div>
+        <button type="submit" name="checkout">Proceed to checkout</button>
+        {% include 'delivery' %}
+      </div>
+    </div>
+  </form>
 
 {%- else -%}
-  <p>The cart is empty. <a href="/pages/shop">Continue shopping</a></p>
+  <p>The cart is empty.</p>
 {%- endif -%}
+
+<p><a href="/pages/shop" is="signpost">Continue shopping</a></p>
