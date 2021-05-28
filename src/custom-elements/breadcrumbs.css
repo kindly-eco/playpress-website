@@ -2,6 +2,8 @@ ul[is="breadcrumbs"] {
   display: flex;
   flex-wrap: wrap;
   padding-inline: 1rem;
+  position: relative;
+  z-index: 2;
 
   & > li {
     display: flex;

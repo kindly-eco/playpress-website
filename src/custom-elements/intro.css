@@ -3,10 +3,12 @@ section[is="intro"] {
   display: grid;
   grid-row-gap: 1rem;
   grid-template-rows: repeat(2, auto);
+  margin-block-start: -3.5rem; /* stylelint-disable-line */
   margin-inline: -1rem;
   overflow: hidden;
-  padding: 1.5rem 1rem;
+  padding: 3.5rem 1rem 1.5rem; /* stylelint-disable-line */
   position: relative;
+  z-index: 1;
 
   /*&::before {
     background-image: linear-gradient(
@@ -54,7 +56,6 @@ section[is="intro"] {
       align-self: center;
       grid-column: 1;
       grid-row: 1 / -1;
-      padding-inline-start: 2rem;
     }
 
     & > img {

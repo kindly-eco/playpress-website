@@ -1,6 +1,5 @@
 <section is="intro">
-  {%- if section.settings.breadcrumbs == true -%} {% include 'breadcrumbs' %}
-  {%- endif -%} {%- if section.settings.heading != blank -%}
+  {%- if section.settings.heading != blank -%}
   <h1>{{ section.settings.heading | escape }}</h1>
   {%- endif -%} {%- if section.settings.text != blank -%}
   <p is="lede">{{ section.settings.text }}</p>
