@@ -1,0 +1,16 @@
+{%- unless template == 'index' -%} {%- assign t = template | split: '.' | first
+-%}
+
+<nav>
+  <ul is="breadcrumbs">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    {%- case t -%} {%- when 'product' -%}
+    <li>
+      <a href="/pages/shop" aria-current="page">Shop</a>
+    </li>
+    {%- endcase -%}
+  </ul>
+</nav>
+{%- endunless -%}
