@@ -1,0 +1,32 @@
+section[is="section"] {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin-block: 2rem;
+  margin-inline: -1rem;
+  padding: 1.5rem 0.5rem 2rem;
+
+  & > h2,
+  & > p,
+  & > a {
+    grid-column: auto / span 1;
+    justify-self: center;
+    text-align: center;
+  }
+
+  & > h2 {
+    grid-row: 1;
+  }
+
+  & > p {
+    grid-row: 2;
+  }
+
+  & > a {
+    grid-row: 4;
+  }
+
+  &.alternative {
+    background-color: hsl(var(--section));
+  }
+}

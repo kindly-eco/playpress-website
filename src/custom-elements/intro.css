@@ -1,69 +1,54 @@
 section[is="intro"] {
-  background-color: hsl(var(--background));
+  align-items: center;
   display: grid;
   grid-row-gap: 1rem;
-  grid-template-rows: repeat(2, auto);
-  margin-block-start: -3.5rem; /* stylelint-disable-line */
-  margin-inline: -1rem;
-  overflow: hidden;
-  padding: 3.5rem 1rem 1.5rem; /* stylelint-disable-line */
-  position: relative;
-  z-index: 1;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 0 1rem 1rem;
 
-  &.no-image {
-    padding: 3.5rem 1rem 0; /* stylelint-disable-line */
+  & > div {
+    align-self: center;
+    justify-self: center;
+    max-inline-size: 40rem;
+    text-align: center;
+
+    & > h1,
+    & > p {
+      max-inline-size: 40rem;
+    }
+  }
+
+  &.with-image {
+    grid-template-rows: repeat(2, auto);
 
     & > div {
-      align-self: center;
-      justify-self: center;
-      max-inline-size: 40rem;
-      text-align: center;
-
-      & > h1,
-      & > p {
-        max-inline-size: 40rem;
+      & > h1 {
+        grid-row: 2;
+        margin-block: 0;
+        max-inline-size: 30rem;
       }
 
       & > img {
-        display: none;
+        grid-row: 1;
       }
     }
 
     @media (min-width: 40em) {
       align-items: center;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-    }
-  }
+      grid-column-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
 
-  & > div {
-    & > h1 {
-      grid-row: 2;
-      margin-block: 0;
-      max-inline-size: 30rem;
-    }
+      & > div {
+        align-self: center;
+        grid-column: 1;
+        grid-row: 1 / -1;
+      }
 
-    & > img {
-      grid-row: 1;
-      z-index: 1;
-    }
-  }
-
-  @media (min-width: 40em) {
-    align-items: center;
-    grid-column-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-
-    & > div {
-      align-self: center;
-      grid-column: 1;
-      grid-row: 1 / -1;
-    }
-
-    & > img {
-      grid-column: 2;
-      grid-row: span 2 / -1;
+      & > img {
+        grid-column: 2;
+        grid-row: span 2 / -1;
+      }
     }
   }
 }

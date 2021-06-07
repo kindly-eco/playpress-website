@@ -24,7 +24,7 @@
 @import "custom-elements/in-action.css";
 @import "custom-elements/intro.css";
 @import "custom-elements/lede.css";
-@import "custom-elements/logo-list.css";
+@import "custom-elements/logos.css";
 @import "custom-elements/menu.css";
 @import "custom-elements/pagination.css";
 @import "custom-elements/people.css";
@@ -35,6 +35,7 @@
 @import "custom-elements/product.css";
 @import "custom-elements/promo.css";
 @import "custom-elements/promos.css";
+@import "custom-elements/section.css";
 @import "custom-elements/shop-intro.css";
 @import "custom-elements/signpost.css";
 @import "custom-elements/skip.css";

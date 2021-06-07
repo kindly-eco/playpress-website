@@ -1,4 +1,4 @@
-<section is="call-outs">
+<section is="section" class="alternative">
   {% if section.settings.title != blank %}
       <h2>{{ section.settings.title | escape }}</h2>
   {% endif %}
@@ -11,7 +11,7 @@
       <article is="call-out">
         {% if block.settings.enable_image %}
           {% if block.settings.image != blank %}
-                <img
+              <img
                 src="{{ block.settings.image | img_url: '800x' }}"
                 alt=""
                 is="in-action"

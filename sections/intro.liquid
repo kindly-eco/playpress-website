@@ -1,4 +1,4 @@
-<section is="intro" {%- if section.settings.image == blank -%}class="no-image"{%- endif -%}>
+<section is="intro" {%- if section.settings.image != blank -%}class="with-image"{%- endif -%}>
   <div>
     {%- if section.settings.heading != blank -%}
       <h1>{{ section.settings.heading | escape }}</h1>
