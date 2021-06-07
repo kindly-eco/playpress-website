@@ -1,5 +1,5 @@
 section[is="intro"] {
-  background-color: hsl(var(--sunken));
+  background-color: hsl(var(--background));
   display: grid;
   grid-row-gap: 1rem;
   grid-template-rows: repeat(2, auto);
@@ -10,40 +10,43 @@ section[is="intro"] {
   position: relative;
   z-index: 1;
 
-  /*&::before {
-    background-image: linear-gradient(
-        hsl(var(--on-complementary) / 5%) 2px,
-        transparent 2px
-      ),
-      linear-gradient(
-        90deg,
-        hsl(var(--on-complementary) / 5%) 2px,
-        transparent 2px
-      ),
-      linear-gradient(hsl(var(--on-complementary) / 5%) 1px, transparent 1px),
-      linear-gradient(
-        90deg,
-        hsl(var(--on-complementary) / 5%) 1px,
-        transparent 1px
-      );
-    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-    content: "";
-    inset: -3rem;
-    position: absolute;
-    transform: rotate(2.5deg);
-  }*/
+  &.no-image {
+    padding: 3.5rem 1rem 0; /* stylelint-disable-line */
 
-  & > h1 {
-    color: hsl(var(--on-hero));
-    grid-row: 2;
-    margin-block: 0;
-    max-inline-size: 30rem;
+    & > div {
+      align-self: center;
+      justify-self: center;
+      max-inline-size: 40rem;
+      text-align: center;
+
+      & > h1,
+      & > p {
+        max-inline-size: 40rem;
+      }
+
+      & > img {
+        display: none;
+      }
+    }
+
+    @media (min-width: 40em) {
+      align-items: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
   }
 
-  & > img {
-    grid-row: 1;
-    z-index: 1;
+  & > div {
+    & > h1 {
+      grid-row: 2;
+      margin-block: 0;
+      max-inline-size: 30rem;
+    }
+
+    & > img {
+      grid-row: 1;
+      z-index: 1;
+    }
   }
 
   @media (min-width: 40em) {
@@ -52,7 +55,7 @@ section[is="intro"] {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
 
-    & > h1 {
+    & > div {
       align-self: center;
       grid-column: 1;
       grid-row: 1 / -1;

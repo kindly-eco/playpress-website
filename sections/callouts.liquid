@@ -1,4 +1,4 @@
-<div is="call-outs">
+<section is="call-outs">
   {% if section.settings.title != blank %}
       <h2>{{ section.settings.title | escape }}</h2>
   {% endif %}
@@ -6,7 +6,7 @@
       <p>{{ section.settings.text | escape }}</p>
   {% endif %}
 
-
+  <div is="call-outs" class="two">
     {% for block in section.blocks %}
       <article is="call-out">
         {% if block.settings.enable_image %}
@@ -31,10 +31,11 @@
         </article>
     {% endfor %}
 
-
   {% if section.blocks.size == 0 %}
     {% include 'no-blocks' %}
   {% endif %}
+
+  </div>
 
   {% if section.settings.show_signpost_link %}
       <a is="signpost" href="{{ section.settings.link_url }}" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
@@ -42,7 +43,7 @@
       </a>
   {% endif %}
 
-</div>
+</section>
 
 {% schema %}
 {

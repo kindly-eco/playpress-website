@@ -1,6 +1,34 @@
+section[is="product-promos"] {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  padding-block: 2rem;
+
+  & > h2,
+  & > p,
+  & > a {
+    grid-column: auto / span 1;
+    justify-self: center;
+  }
+
+  & > h2 {
+    grid-row: 1;
+  }
+
+  & > p {
+    grid-row: 2;
+  }
+
+  & > a {
+    grid-row: 4;
+  }
+}
+
 div[is="product-promos"] {
   display: grid;
+  grid-column: auto / span 1;
   grid-gap: 1.5rem;
+  grid-row: 3;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   margin-block: 2rem;
 

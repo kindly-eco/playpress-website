@@ -1,4 +1,66 @@
 section[is="logo-list"] {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
   margin-block-end: 4rem;
   margin-block-start: 2rem;
+  padding-block: 2rem;
+
+  & > h2,
+  & > p,
+  & > a {
+    grid-column: auto / span 1;
+    justify-self: center;
+  }
+
+  & > h2 {
+    grid-row: 1;
+  }
+
+  & > p {
+    grid-row: 2;
+  }
+
+  & > a {
+    grid-row: 4;
+  }
+}
+
+ul[is="logos"] {
+  display: grid;
+  grid-column: auto / span 1;
+  grid-row: 3;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  list-style: none;
+  padding-inline-start: 0;
+
+  & > li {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-block: 0.5rem;
+    margin-block-end: 1rem;
+    padding-inline: 1rem;
+    text-align: center;
+
+    & > img {
+      justify-self: center;
+      margin-block-end: 1rem;
+
+      &.small {
+        max-inline-size: 6rem;
+      }
+
+      &.medium {
+        max-inline-size: 8rem;
+      }
+
+      &.large {
+        max-inline-size: 10rem;
+      }
+    }
+
+    & > span {
+      align-self: end;
+    }
+  }
 }

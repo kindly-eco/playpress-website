@@ -32,16 +32,24 @@ section[is="hero"] {
     transform: rotate(2.5deg);
   }*/
 
-  & > h1 {
-    color: hsl(var(--on-hero));
-    grid-row: 2;
-    margin-block: 0;
-    max-inline-size: 30rem;
-  }
+  & > div {
+    text-align: center;
 
-  & > img {
-    grid-row: 1;
-    z-index: 1;
+    & > h1 {
+      color: hsl(var(--on-hero));
+      grid-row: 2;
+      margin-block: 0;
+      max-inline-size: 30rem;
+    }
+
+    & > p {
+      color: hsl(var(--on-hero));
+    }
+
+    & > img {
+      grid-row: 1;
+      z-index: 1;
+    }
   }
 
   @media (min-width: 40em) {
@@ -50,11 +58,12 @@ section[is="hero"] {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
 
-    & > h1 {
+    & > div {
       align-self: center;
       grid-column: 1;
       grid-row: 1 / -1;
       padding-inline-start: 2rem;
+      text-align: start;
     }
 
     & > img {

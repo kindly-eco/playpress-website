@@ -1,11 +1,40 @@
-div[is="call-outs"] {
+section[is="call-outs"] {
   background-color: hsl(var(--call-outs));
   display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
   margin-block: 2rem;
   margin-inline: -1rem;
-  padding: 0.5rem;
+  padding: 1.5rem 0.5rem 2rem;
+
+  & > h2,
+  & > p,
+  & > a {
+    grid-column: auto / span 1;
+    justify-self: center;
+    text-align: center;
+  }
+
+  & > h2 {
+    grid-row: 1;
+  }
+
+  & > p {
+    grid-row: 2;
+  }
+
+  & > a {
+    grid-row: 4;
+  }
+}
+
+div[is="call-outs"] {
+  grid-column: auto / span 1;
+  grid-row: 3;
+  margin-block: 1.5rem;
 
   @media (min-width: 40em) {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
 
     &.one {
