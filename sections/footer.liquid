@@ -1,88 +1,85 @@
-    <footer is="footer" role="contentinfo">
-      <div>
-        <ul>
-          {% for link in linklists[section.settings.footer_linklist].links %}
-          <li {% if link.active %} class="on"{% endif %}>
-                <a href="{{ link.url }}"
-                  class="{% if link.active %} active{% endif %}"
-                  {% if link.current %} aria-current="page"{% endif %}
-                >{{ link.title }}
-                </a>
-              </li>
-          {% endfor %}
-        </ul>
+<footer is="footer" role="contentinfo">
+  <ul>
+    {% for link in linklists[section.settings.footer_linklist].links %}
+      <li {% if link.active %} class="on"{% endif %}>
+        <a href="{{ link.url }}" class="{% if link.active %} active{% endif %}">
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 
-        <dark-mode-toggle id="dark-mode-toggle" label="Dark mode"></dark-mode-toggle>
-        {{ section.settings.feedback_text }}
+  <dark-mode-toggle id="dark-mode-toggle" label="Dark mode"></dark-mode-toggle>
 
-        {%- if section.blocks.size > 0 -%}
-        <ul>
-          {%- for block in section.blocks -%}
-          <li {{ block.shopify_attributes }}>
-            {%- if block.settings.link_text != blank -%}
-              <a href="{{ block.settings.link_url }}">
-                {{ block.settings.link_text }}
-                {{ block.settings.link_image }}
-              </a>
-            {%- endif -%}
-          </li>
-          {%- endfor -%}
-        </ul>
-        {%- endif -%}
+  {{ section.settings.feedback_text }}
 
-        <p>
-          This website was crafted by <a href="https://www.kindly.eco">Kindly</a> to be eco-friendly.
-        </p>
-        <p>
-          <small>Copyright 2020 Playpress</small>
-        </p>
-      </div>
-    </footer>
-    {% schema %}
+  {%- if section.blocks.size > 0 -%}
+    <ul>
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}>
+          {%- if block.settings.link_text != blank -%}
+            <a href="{{ block.settings.link_url }}">
+              {{ block.settings.link_text }}
+              {{ block.settings.link_image }}
+            </a>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <p>
+    This website was crafted by <a href="https://www.kindly.eco">Kindly</a> to be eco-friendly.
+  </p>
+  <p>
+    <small>Copyright 2020 Playpress</small>
+  </p>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
     {
-    "name": "Footer",
-    "settings": [
-      {
       "type": "link_list",
       "id": "footer_linklist",
       "label": "Footer menu",
       "default": "footer"
-      },
-      {
+    },
+    {
       "type": "richtext",
       "id": "feedback_text",
       "label": "Feedback text",
       "default": "<p>Tell us more!</p>"
-      },
-      {
+    },
+    {
       "type": "image_picker",
       "id": "footer_image",
       "label": "Footer image"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "text",
-        "name": "Social links",
-        "settings": [
-          {
-            "type": "text",
-            "id": "link_text",
-            "label": "Link text"
-          },
-          {
-            "type": "url",
-            "id": "link_url",
-            "label": "Link URL"
-          },
-          {
-            "type": "image_picker",
-            "id": "link_image",
-            "label": "Link image"
-          }
-
-        ]
-      }
-    ]
     }
-    {% endschema %}
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Social links",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "link_image",
+          "label": "Link image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

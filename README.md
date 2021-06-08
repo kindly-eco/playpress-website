@@ -1,6 +1,6 @@
 # Playpress website
 
-The website and element library of Playpress.
+The website of Playpress.
 
 ## Getting started
 

@@ -1,0 +1,33 @@
+article[is="product-promo"] {
+  border-block-start: 2px solid hsl(var(--separator));
+  max-inline-size: 40rem;
+
+  & > a {
+    display: grid;
+    grid-gap: 1rem;
+    text-decoration: none;
+
+    & > * {
+      margin: 0;
+    }
+
+    & > h3 {
+      color: hsl(var(--link));
+      order: 2;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & > img {
+      order: 1;
+    }
+
+    & > p {
+      color: hsl(var(--text));
+      font-size: 1.17em;
+      order: 3;
+    }
+  }
+}

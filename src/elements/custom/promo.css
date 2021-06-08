@@ -18,26 +18,6 @@ article[is="promo"] {
       position: relative;
     }
 
-    & > div[is="product-meta"] {
-      align-self: end;
-
-      & > h3 {
-        color: hsl(var(--link));
-        margin-block-start: 1rem;
-        text-decoration: underline;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      & > dl {
-        align-self: end;
-        color: hsl(var(--text));
-        margin-block-start: 0;
-      }
-    }
-
     & > img {
       align-self: center;
     }

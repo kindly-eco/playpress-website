@@ -1,5 +1,5 @@
+node_modules
 .eslintcache
 .stylelintcache
 .DS_Store
-node_modules
 config.yml

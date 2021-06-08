@@ -4,7 +4,7 @@ aside[is="about"] {
   gap: 2rem;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin-block: 2rem -3rem;
+  margin-block: 2rem -5rem;
   margin-inline: -1rem;
   padding-block: 2rem 4rem;
   padding-inline: 1rem;

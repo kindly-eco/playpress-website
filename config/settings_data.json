@@ -1,16 +1,16 @@
 {
   "current": {
-    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "favicon": "shopify://shop_images/favicon.png",
     "heading_primary": "Hours of hands-on play",
     "text_primary": "Just like lego, our playsets can be built and then re-built in a variety of ways. Unleash your imagination!",
-    "image_primary": "shopify:\/\/shop_images\/about-girl.jpg",
+    "image_primary": "shopify://shop_images/about-girl.jpg",
     "heading_secondary": "Eco-friendly",
     "text_secondary": "Our materials are sustainably sourced and 100% recyclable and biodegradable.",
     "heading_tertiary": "Affordable",
     "text_tertiary": "Our playsets are affordable because we don’t use expensive plastics that harm the planet.",
-    "link_url": "shopify:\/\/pages\/about",
+    "link_url": "shopify://pages/about",
     "link_text": "Learn more about Playpress!",
-    "checkout_logo_image": "shopify:\/\/shop_images\/PP_Logo_1.3R_HR-01_512.png",
+    "checkout_logo_image": "shopify://shop_images/PP_Logo_1.3R_HR-01_512.png",
     "checkout_logo_size": "large",
     "checkout_sidebar_background_color": "#e9e9f2",
     "checkout_accent_color": "#2b68a0",
@@ -36,14 +36,14 @@
             "type": "text",
             "settings": {
               "link_text": "Playpress on Instagram",
-              "link_url": "https:\/\/instagram.com\/playpresstoys"
+              "link_url": "https://instagram.com/playpresstoys"
             }
           },
           "37a6bace-d661-4e31-8d14-d2e2bc702b28": {
             "type": "text",
             "settings": {
               "link_text": "Playpress on Facebook",
-              "link_url": "https:\/\/www.facebook.com\/playpresstoys"
+              "link_url": "https://www.facebook.com/playpresstoys"
             }
           }
         },
@@ -53,7 +53,7 @@
         ],
         "settings": {
           "footer_linklist": "footer",
-          "feedback_text": "<p>tesr tesr<\/p><p><\/p><p>Tell us what you think! If you have any questions about Playpress, or a great idea that you’d like to see brought to life in Playboard, send us a message at <a href=\"\/pages\/about\" title=\"About\">team@playpresstoys.co.uk<\/a>.<\/p>"
+          "feedback_text": "<p>tesr tesr</p><p></p><p>Tell us what you think! If you have any questions about Playpress, or a great idea that you’d like to see brought to life in Playboard, send us a message at <a href=\"/pages/about\" title=\"About\">team@playpresstoys.co.uk</a>.</p>"
         }
       },
       "breadcrumbs": {
@@ -65,7 +65,7 @@
         "settings": {
           "heading": "Press out, build up and play on!",
           "text": "Playpress are buildable playsets for ages 4 and up, made right here in the UK.",
-          "image": "shopify:\/\/shop_images\/hero-girl.jpg"
+          "image": "shopify://shop_images/hero-girl.jpg"
         }
       },
       "1615318787e89a54d6": {
@@ -118,7 +118,7 @@
             "settings": {
               "enable_image": true,
               "title": "Add a title or tagline",
-              "text": "<p>Add descriptve text<\/p>"
+              "text": "<p>Add descriptve text</p>"
             }
           },
           "161531895785b016a3-1": {
@@ -126,14 +126,11 @@
             "settings": {
               "enable_image": true,
               "title": "Add a title or tagline",
-              "text": "<p>Add descriptve text<\/p>"
+              "text": "<p>Add descriptve text</p>"
             }
           }
         },
-        "block_order": [
-          "161531895785b016a3-0",
-          "161531895785b016a3-1"
-        ],
+        "block_order": ["161531895785b016a3-0", "161531895785b016a3-1"],
         "settings": {
           "title": "Callout blocks of information",
           "text": "Text to introduce this section of content"
@@ -145,29 +142,29 @@
           "1615318990a47c88b7-0": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/shopify-table-decor.jpg",
-              "link": "shopify:\/\/pages\/about"
+              "image": "shopify://shop_images/shopify-table-decor.jpg",
+              "link": "shopify://pages/about"
             }
           },
           "1615318990a47c88b7-2": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/emoji-faces-on-a-screen.jpg",
-              "link": "shopify:\/\/pages\/bespoke-playsets"
+              "image": "shopify://shop_images/emoji-faces-on-a-screen.jpg",
+              "link": "shopify://pages/bespoke-playsets"
             }
           },
           "1615318990a47c88b7-1": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/shopify-table-decor.jpg",
-              "link": "shopify:\/\/pages\/about"
+              "image": "shopify://shop_images/shopify-table-decor.jpg",
+              "link": "shopify://pages/about"
             }
           },
           "1615318990a47c88b7-3": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/emoji-faces-on-a-screen.jpg",
-              "link": "shopify:\/\/collections\/all"
+              "image": "shopify://shop_images/emoji-faces-on-a-screen.jpg",
+              "link": "shopify://collections/all"
             }
           }
         },
@@ -185,9 +182,9 @@
         "type": "s-image-with-text",
         "settings": {
           "title": "Image with text",
-          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
           "link_text": "",
-          "image": "shopify:\/\/shop_images\/about-girl.jpg",
+          "image": "shopify://shop_images/about-girl.jpg",
           "layout": "left"
         }
       },
@@ -197,21 +194,21 @@
           "16153838206d72b3ad-0": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
               "author": "Author's name"
             }
           },
           "16153838206d72b3ad-1": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
               "author": "Author's name"
             }
           },
           "16153838206d72b3ad-2": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
               "author": "Author's name"
             }
           }

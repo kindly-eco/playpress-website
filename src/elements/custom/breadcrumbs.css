@@ -38,6 +38,10 @@ ul[is="breadcrumbs"] {
       display: none;
     }
 
+    & > a {
+      color: hsl(var(--link));
+    }
+
     @media (min-width: 26em) {
       &:first-of-type {
         &::before {
