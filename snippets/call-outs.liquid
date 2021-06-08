@@ -1,0 +1,46 @@
+<section is="section" class="alternative">
+  {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title | escape }}</h2>
+  {% endif %}
+  {% if section.settings.text != blank %}
+      <p>{{ section.settings.text | escape }}</p>
+  {% endif %}
+
+  <div is="call-outs" class="two">
+    {% for block in section.blocks %}
+      <article is="call-out">
+        {% if block.settings.enable_image %}
+          {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | img_url: '800x' }}"
+                alt=""
+                is="in-action"
+                />
+          {% else %}
+            <p>
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </p>
+          {% endif %}
+        {% endif %}
+        {% if block.settings.title != blank %}
+          <h3>{{ block.settings.title | escape }}</h3>
+        {% endif %}
+        {% if block.settings.text != blank %}
+          <p>{{ block.settings.text }}</p>
+        {% endif %}
+        </article>
+    {% endfor %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+
+  </div>
+
+  {% if section.settings.show_signpost_link %}
+      <a is="signpost" href="{{ section.settings.link_url }}" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
+        {{ section.settings.link_text }}
+      </a>
+  {% endif %}
+
+</section>

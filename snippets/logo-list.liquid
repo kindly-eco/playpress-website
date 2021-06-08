@@ -1,0 +1,44 @@
+<section is="section">
+  {% if section.settings.title != blank %}
+    <h2>{{ section.settings.title | escape }}</h2>
+  {% endif %}
+  {% if section.settings.text != blank %}
+    <p>{{ section.settings.text }}</p>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <ul is="logos">
+      {% for block in section.blocks %}
+        <li>
+          {% if block.settings.link != blank %}
+            <a href="{{ block.settings.link }}">
+          {% endif %}
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | img_url: '200x200' }}" class="{{ block.settings.image_size }}" alt="" />
+          {% else %}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+          {% if block.settings.link != blank %}
+            </a>
+          {% endif %}
+          {% if block.settings.logo_text != blank %}
+              <span {% if block.settings.show_logo_text == false %} class="visually-hidden"{% endif %}>
+                {{ block.settings.logo_text }}
+              </span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+
+  {% if section.settings.show_signpost_link %}
+    <a is="signpost" href="{{ section.settings.link_url }}" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
+      {{ section.settings.link_text }}
+    </a>
+  {% endif %}
+
+</section>
