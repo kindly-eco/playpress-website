@@ -1,3 +1,5 @@
+config
+locales
 node_modules
 .eslintcache
 .stylelintcache

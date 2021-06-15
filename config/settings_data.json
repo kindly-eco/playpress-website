@@ -1,21 +1,21 @@
 {
   "current": {
-    "favicon": "shopify://shop_images/favicon.png",
     "heading_primary": "Hours of hands-on play",
     "text_primary": "Just like lego, our playsets can be built and then re-built in a variety of ways. Unleash your imagination!",
-    "image_primary": "shopify://shop_images/about-girl.jpg",
+    "image_primary": "shopify:\/\/shop_images\/about-girl.jpg",
     "heading_secondary": "Eco-friendly",
     "text_secondary": "Our materials are sustainably sourced and 100% recyclable and biodegradable.",
     "heading_tertiary": "Affordable",
     "text_tertiary": "Our playsets are affordable because we don’t use expensive plastics that harm the planet.",
-    "link_url": "shopify://pages/about",
+    "link_url": "shopify:\/\/pages\/about",
     "link_text": "Learn more about Playpress!",
-    "checkout_logo_image": "shopify://shop_images/PP_Logo_1.3R_HR-01_512.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/PP_Logo_1.3R_HR-01_512.png",
     "checkout_logo_size": "large",
     "checkout_sidebar_background_color": "#e9e9f2",
     "checkout_accent_color": "#2b68a0",
     "checkout_button_color": "#f9b42b",
     "checkout_error_color": "#c4275b",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "type_header_font": "helvetica_n7",
     "sections": {
       "header": {
@@ -36,14 +36,14 @@
             "type": "text",
             "settings": {
               "link_text": "Playpress on Instagram",
-              "link_url": "https://instagram.com/playpresstoys"
+              "link_url": "https:\/\/instagram.com\/playpresstoys"
             }
           },
           "37a6bace-d661-4e31-8d14-d2e2bc702b28": {
             "type": "text",
             "settings": {
               "link_text": "Playpress on Facebook",
-              "link_url": "https://www.facebook.com/playpresstoys"
+              "link_url": "https:\/\/www.facebook.com\/playpresstoys"
             }
           }
         },
@@ -53,216 +53,85 @@
         ],
         "settings": {
           "footer_linklist": "footer",
-          "feedback_text": "<p>tesr tesr</p><p></p><p>Tell us what you think! If you have any questions about Playpress, or a great idea that you’d like to see brought to life in Playboard, send us a message at <a href=\"/pages/about\" title=\"About\">team@playpresstoys.co.uk</a>.</p>"
+          "feedback_text": "<p>tesr tesr<\/p><p><\/p><p>Tell us what you think! If you have any questions about Playpress, or a great idea that you’d like to see brought to life in Playboard, send us a message at <a href=\"\/pages\/about\" title=\"About\">team@playpresstoys.co.uk<\/a>.<\/p>"
         }
       },
       "breadcrumbs": {
         "type": "breadcrumbs",
         "settings": {}
       },
-      "1615318287c3334ef1": {
-        "type": "s-hero",
+      "16237663901d8f6c9b": {
+        "type": "hero",
         "settings": {
-          "heading": "Press out, build up and play on!",
-          "text": "Playpress are buildable playsets for ages 4 and up, made right here in the UK.",
-          "image": "shopify://shop_images/hero-girl.jpg"
+          "heading": "dssadas",
+          "text": "dsadasd",
+          "image": "shopify:\/\/shop_images\/shipping-materials-flatlay.jpg"
         }
       },
-      "1615318787e89a54d6": {
-        "type": "s-product-collection",
+      "intro-about": {
+        "type": "intro-about",
         "settings": {
-          "title": "Our best-sellers",
-          "collection": "best-sellers",
-          "grid": 4,
-          "rows": 1,
-          "show_view_all": true
+          "heading": "dsfdsf",
+          "text": "fdsfsdfds"
         }
       },
-      "1615318846c68e8d59": {
-        "type": "s-collection-links",
-        "blocks": {
-          "1615318846c68e8d59-0": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "best-sellers"
-            }
-          },
-          "1615318846c68e8d59-1": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "bundle-playsets"
-            }
-          },
-          "1615318846c68e8d59-2": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "gruffalo-playsets"
-            }
-          }
-        },
-        "block_order": [
-          "1615318846c68e8d59-0",
-          "1615318846c68e8d59-1",
-          "1615318846c68e8d59-2"
-        ],
-        "settings": {
-          "title": "Collection list",
-          "grid": 3
-        }
-      },
-      "161531895785b016a3": {
-        "type": "s-callouts",
-        "blocks": {
-          "161531895785b016a3-0": {
-            "type": "text_block",
-            "settings": {
-              "enable_image": true,
-              "title": "Add a title or tagline",
-              "text": "<p>Add descriptve text</p>"
-            }
-          },
-          "161531895785b016a3-1": {
-            "type": "text_block",
-            "settings": {
-              "enable_image": true,
-              "title": "Add a title or tagline",
-              "text": "<p>Add descriptve text</p>"
-            }
-          }
-        },
-        "block_order": ["161531895785b016a3-0", "161531895785b016a3-1"],
-        "settings": {
-          "title": "Callout blocks of information",
-          "text": "Text to introduce this section of content"
-        }
-      },
-      "1615318990a47c88b7": {
-        "type": "s-logo-list",
-        "blocks": {
-          "1615318990a47c88b7-0": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify://shop_images/shopify-table-decor.jpg",
-              "link": "shopify://pages/about"
-            }
-          },
-          "1615318990a47c88b7-2": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify://shop_images/emoji-faces-on-a-screen.jpg",
-              "link": "shopify://pages/bespoke-playsets"
-            }
-          },
-          "1615318990a47c88b7-1": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify://shop_images/shopify-table-decor.jpg",
-              "link": "shopify://pages/about"
-            }
-          },
-          "1615318990a47c88b7-3": {
-            "type": "logo_image",
-            "settings": {
-              "image": "shopify://shop_images/emoji-faces-on-a-screen.jpg",
-              "link": "shopify://collections/all"
-            }
-          }
-        },
-        "block_order": [
-          "1615318990a47c88b7-0",
-          "1615318990a47c88b7-2",
-          "1615318990a47c88b7-1",
-          "1615318990a47c88b7-3"
-        ],
-        "settings": {
-          "title": "Logo list"
-        }
-      },
-      "1615319109f29857b8": {
-        "type": "s-image-with-text",
+      "image-with-text-educational": {
+        "type": "image-with-text-educational",
         "settings": {
           "title": "Image with text",
-          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
           "link_text": "",
-          "image": "shopify://shop_images/about-girl.jpg",
           "layout": "left"
         }
       },
-      "16153838206d72b3ad": {
-        "type": "s-quotes",
-        "blocks": {
-          "16153838206d72b3ad-0": {
-            "type": "quote",
-            "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-              "author": "Author's name"
-            }
-          },
-          "16153838206d72b3ad-1": {
-            "type": "quote",
-            "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-              "author": "Author's name"
-            }
-          },
-          "16153838206d72b3ad-2": {
-            "type": "quote",
-            "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-              "author": "Author's name"
-            }
-          }
-        },
-        "block_order": [
-          "16153838206d72b3ad-0",
-          "16153838206d72b3ad-1",
-          "16153838206d72b3ad-2"
-        ],
+      "call-outs-sustainability": {
+        "type": "call-outs-sustainability",
         "settings": {
-          "title": "Testimonials"
+          "title": "Callout blocks of information",
+          "text": "Text to introduce this section of content",
+          "show_signpost_link": false,
+          "link_text": "View more"
         }
       },
-      "cart-template": {
-        "type": "cart-template",
+      "image-with-text-award": {
+        "type": "image-with-text-award",
         "settings": {
-          "cart_ajax_enable": true,
-          "cart_notes_enable": false
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "link_text": "",
+          "layout": "left"
         }
       },
-      "product-page": {
-        "type": "product-page",
+      "image-with-text-pete": {
+        "type": "image-with-text-pete",
         "settings": {
-          "show_share_buttons": true,
-          "show_testimonial": true,
-          "show_instagram": true,
-          "show_about": true
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "link_text": "",
+          "layout": "left"
         }
       },
-      "product-recommendations": {
-        "type": "product-recommendations",
+      "feature-list-new-worlds": {
+        "type": "feature-list-new-worlds",
         "settings": {
-          "show_product_recommendations": true,
-          "heading": "You may also like"
+          "title": "Logo list",
+          "text": "",
+          "show_signpost_link": false,
+          "link_text": "View more"
         }
       },
-      "collection-page": {
-        "type": "collection-page",
-        "settings": {}
-      },
-      "16154101591cf38c8a": {
-        "type": "s-about-brand",
-        "settings": {}
+      "call-outs-team": {
+        "type": "call-outs-team",
+        "settings": {
+          "title": "Callout blocks of information",
+          "text": "Text to introduce this section of content",
+          "show_signpost_link": false,
+          "link_text": "View more"
+        }
       }
     },
     "content_for_index": [
-      "1615318287c3334ef1",
-      "1615318787e89a54d6",
-      "1615318846c68e8d59",
-      "161531895785b016a3",
-      "1615318990a47c88b7",
-      "1615319109f29857b8",
-      "16153838206d72b3ad",
-      "16154101591cf38c8a"
+      "16237663901d8f6c9b"
     ]
   }
 }
