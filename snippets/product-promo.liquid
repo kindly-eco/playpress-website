@@ -1,12 +1,13 @@
 <article is="product-promo">
   <a href="{{ product.url | within: collection }}">
     <h3>{{ product.title }}</h3>
-
     <img
       src="{{ product.featured_media | img_url: '800x' }}"
       alt=""
+      loading="lazy"
+      width="800"
+      height="600"
     />
-
     <p>{{ product.price | money }}</p>
   </a>
 </article>

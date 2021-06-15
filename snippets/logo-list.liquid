@@ -14,7 +14,14 @@
             <a href="{{ block.settings.link }}">
           {% endif %}
           {% if block.settings.image != blank %}
-            <img src="{{ block.settings.image | img_url: '200x200' }}" class="{{ block.settings.image_size }}" alt="" />
+            <img
+              src="{{ block.settings.image | img_url: '200x200' }}"
+              class="{{ block.settings.image_size }}"
+              alt=""
+              loading="lazy"
+              width="200"
+              height="200"
+              />
           {% else %}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
           {% endif %}
