@@ -1,38 +1,20 @@
 ul[is="logos"] {
   display: grid;
-  grid-column: auto / span 1;
-  grid-row: 3;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
   list-style: none;
   padding-inline-start: 0;
 
   & > li {
+    background: hsl(var(--logo-list));
+    block-size: 8rem;
     display: grid;
-    grid-template-columns: 1fr;
-    margin-block: 0.5rem;
-    margin-block-end: 1rem;
-    padding-inline: 1rem;
-    text-align: center;
-
-    & > img {
-      justify-self: center;
-      margin-block-end: 1rem;
-
-      &.small {
-        max-inline-size: 6rem;
-      }
-
-      &.medium {
-        max-inline-size: 8rem;
-      }
-
-      &.large {
-        max-inline-size: 10rem;
-      }
-    }
+    inline-size: 8rem;
+    padding: 2rem;
+    place-items: center;
 
     & > span {
-      align-self: end;
+      display: none;
     }
   }
 }

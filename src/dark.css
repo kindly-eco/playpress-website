@@ -52,8 +52,5 @@
   --pete-drop: var(--sea-16);
   --about-background: var(--sea-16);
   --about-elevated: var(--sea-12);
-}
-
-img {
-  filter: brightness(0.8) contrast(1.2);
+  --logo-list: var(--charcoal-1);
 }

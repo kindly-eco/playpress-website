@@ -19,8 +19,9 @@
               class="{{ block.settings.image_size }}"
               alt=""
               loading="lazy"
-              width="200"
-              height="200"
+
+              width="{{block.settings.image.width}}"
+              height="{{block.settings.image.height}}"
               />
           {% else %}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
