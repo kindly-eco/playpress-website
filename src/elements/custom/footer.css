@@ -81,4 +81,8 @@ footer[is="footer"] {
     background-repeat: no-repeat;
     background-size: 40%;
   }
+
+  @media (min-width: 40em) {
+    padding-inline: 2rem;
+  }
 }

@@ -1,0 +1,13 @@
+article[is="feature"] {
+  margin-block: 1rem;
+  max-inline-size: 50rem;
+
+  & > img {
+    margin-block-end: 1.25rem;
+  }
+
+  & > h3 {
+    font-size: 1.73em;
+    margin-block: 0;
+  }
+}

@@ -4,7 +4,7 @@ aside[is="about"] {
   gap: 2rem;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin-block: 2rem -5rem;
+  margin-block: 0 -5rem;
   margin-inline: -1rem;
   padding-block: 2rem 4rem;
   padding-inline: 1rem;
@@ -164,5 +164,10 @@ aside[is="about"] {
         flex-direction: row;
       }
     }
+  }
+
+  @media (min-width: 40em) {
+    margin-inline: -2rem;
+    padding-inline: 2rem;
   }
 }

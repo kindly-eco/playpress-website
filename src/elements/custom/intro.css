@@ -22,6 +22,9 @@ section[is="intro"] {
     grid-template-rows: repeat(2, auto);
 
     & > div {
+      justify-self: start;
+      text-align: start;
+
       & > h1 {
         grid-row: 2;
         margin-block: 0;

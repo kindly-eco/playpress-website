@@ -28,6 +28,10 @@ body {
 main {
   margin-block-end: 5rem;
   padding-inline: 1rem;
+
+  @media (min-width: 40em) {
+    padding-inline: 2rem;
+  }
 }
 
 h1,

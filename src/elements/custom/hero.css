@@ -8,30 +8,6 @@ section[is="hero"] {
   padding: 1.5rem 1rem;
   position: relative;
 
-  /*&::before {
-    background-image: linear-gradient(
-        hsl(var(--on-complementary) / 5%) 2px,
-        transparent 2px
-      ),
-      linear-gradient(
-        90deg,
-        hsl(var(--on-complementary) / 5%) 2px,
-        transparent 2px
-      ),
-      linear-gradient(hsl(var(--on-complementary) / 5%) 1px, transparent 1px),
-      linear-gradient(
-        90deg,
-        hsl(var(--on-complementary) / 5%) 1px,
-        transparent 1px
-      );
-    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-    content: "";
-    inset: -3rem;
-    position: absolute;
-    transform: rotate(2.5deg);
-  }*/
-
   & > div {
     text-align: center;
 
@@ -39,11 +15,11 @@ section[is="hero"] {
       color: hsl(var(--on-hero));
       grid-row: 2;
       margin-block: 0;
-      max-inline-size: 30rem;
     }
 
     & > p {
       color: hsl(var(--on-hero));
+      max-inline-size: 100%;
     }
 
     & > img {
@@ -57,6 +33,7 @@ section[is="hero"] {
     grid-column-gap: 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    margin-inline: -2rem;
 
     & > div {
       align-self: center;

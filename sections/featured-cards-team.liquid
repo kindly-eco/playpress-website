@@ -1,20 +1,28 @@
-{% include 'call-outs' %}
+{% include 'featured-card' %}
 
 {% schema %}
 {
-  "name": "Callouts",
+  "name": "Featured cards",
   "settings": [
     {
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "Callout blocks of information"
+      "default": "Add a heading"
     },
     {
       "type": "textarea",
       "id": "text",
-      "label": "Text",
-      "default": "Text to introduce this section of content"
+      "label": "Text"
+    },
+    {
+      "type": "range",
+      "id": "grid",
+      "label": "Features per row",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 2
     },
     {
       "type": "checkbox",
@@ -37,7 +45,7 @@
   "blocks": [
     {
       "type": "text_block",
-      "name": "Column",
+      "name": "Featured Card",
       "settings": [
         {
           "type": "checkbox",
@@ -61,20 +69,6 @@
           "id": "text",
           "label": "Text",
           "default": "<p>Add descriptve text</p>"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Callouts",
-      "category": "Text",
-      "blocks": [
-        {
-          "type": "text_block"
-        },
-        {
-          "type": "text_block"
         }
       ]
     }

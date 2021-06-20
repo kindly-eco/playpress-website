@@ -2,14 +2,13 @@ article[is="promo"] {
   display: block;
 
   & > a {
-    background-color: hsl(var(--background));
+    background-color: hsl(var(--sunken));
     block-size: calc(100% - 2rem);
-    /*border-radius: 0.5rem;
-    box-shadow: 0 0 4px 2px hsl(var(--drop));*/
+    border-radius: 0.5rem;
     display: grid;
     grid-template-columns: 1fr;
     max-inline-size: 40rem;
-    /*padding: 1.25rem;*/
+    padding: 0.75rem 1.25rem;
     text-decoration: none;
 
     &:active {
@@ -33,7 +32,7 @@ article[is="promo"] {
     }
 
     & > p {
-      align-self: end;
+      align-self: start;
       color: hsl(var(--text));
       margin-block-start: 0;
     }

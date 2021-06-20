@@ -1,4 +1,4 @@
-<section is="image-with-text">
+<section is="image-with-text" {% if section.settings.layout == 'right' %}class="alternative"{% endif %}>
   {% if section.settings.image != blank %}
   <img
     src="{{ section.settings.image | img_url: 'master' }}"

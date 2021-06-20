@@ -1,12 +1,21 @@
 section[is="image-with-text"] {
   display: grid;
-  margin-block-end: 4rem;
-  margin-block-start: 2rem;
+  margin-block: 4rem;
 
   @media (min-width: 50em) {
     grid-column-gap: 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+
+    &.alternative {
+      & > img {
+        grid-column: 2;
+      }
+
+      & > div {
+        grid-column: 1;
+      }
+    }
 
     & > div {
       align-self: center;

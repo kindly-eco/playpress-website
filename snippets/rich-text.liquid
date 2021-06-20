@@ -1,0 +1,10 @@
+<section is="section" {% if section.settings.show_colour == true %}class="alternative"{% endif %}>
+  <div is="rich-text">
+    {%- if section.settings.heading != blank -%}
+      <h3>{{ section.settings.heading }}</h3>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      {{ section.settings.text }}
+    {%- endif -%}
+  </div>
+</section>

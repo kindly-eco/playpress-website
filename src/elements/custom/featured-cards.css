@@ -1,0 +1,29 @@
+div[is="featured-cards"] {
+  grid-column: auto / span 1;
+  grid-column-gap: 2rem;
+  grid-row: 3;
+  margin-block: 1rem 0;
+
+  & > article[is="feature"] {
+    background-color: hsl(var(--call-out));
+    border-radius: 0.5rem;
+    padding: 2rem;
+  }
+
+  @media (min-width: 40em) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &.one {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &.three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.four {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

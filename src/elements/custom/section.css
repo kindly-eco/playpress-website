@@ -24,9 +24,24 @@ section[is="section"] {
 
   & > a {
     grid-row: 4;
+    padding-block: 1rem;
+  }
+
+  & > div[is="rich-text"] {
+    margin-inline: auto;
+    max-inline-size: 50rem;
   }
 
   &.alternative {
     background-color: hsl(var(--section));
+    margin-block: 2rem 0;
+
+    @media (min-width: 40em) {
+      margin-inline: -2rem;
+    }
+  }
+
+  @media (min-width: 40em) {
+    padding-inline: 2rem;
   }
 }
