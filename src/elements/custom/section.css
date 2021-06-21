@@ -2,7 +2,6 @@ section[is="section"] {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin-block: 2rem;
   margin-inline: -1rem;
   padding: 1.5rem 1rem 2rem;
 
@@ -27,14 +26,9 @@ section[is="section"] {
     padding-block: 1rem;
   }
 
-  & > div[is="rich-text"] {
-    margin-inline: auto;
-    max-inline-size: 50rem;
-  }
-
   &.alternative {
     background-color: hsl(var(--section));
-    margin-block: 2rem 0;
+    margin-block: 1rem;
 
     @media (min-width: 40em) {
       margin-inline: -2rem;

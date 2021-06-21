@@ -1,5 +1,5 @@
 article[is="product-promo"] {
-  border-block-start: 2px solid hsl(var(--separator));
+  /* border-block-start: 2px solid hsl(var(--separator)); */
   max-inline-size: 40rem;
 
   & > a {
