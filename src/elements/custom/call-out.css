@@ -1,5 +1,5 @@
 article[is="call-out"] {
-  background-color: hsl(var(--call-out));
+  background-color: hsl(var(--background));
   border-radius: 0.5rem;
   margin: 0.5rem;
   max-inline-size: 50rem;

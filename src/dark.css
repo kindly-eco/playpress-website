@@ -19,7 +19,6 @@
   --active: var(--berry-2);
   --focus: var(--sun-1-2);
   --focus-drop: var(--sun-1-5);
-  --focus-inset: var(--sun-1-1);
   --on-focus: var(--sea-10);
   --on-focus-link: var(--sky-6);
   --on-focus-visited: var(--violet-6);
@@ -45,9 +44,8 @@
   --toggle-thumb: var(--sea-1);
   --logo: var(--sea-11);
   --logo-secondary: var(--sea-1);
-  --hero: var(--sea-16);
+  --hero: var(--sea-17);
   --on-hero: var(--charcoal-1-5);
-  --call-out: var(--sea-16);
   --pete: var(--sea-6);
   --pete-drop: var(--sea-16);
   --about-background: var(--sea-16);

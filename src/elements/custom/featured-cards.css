@@ -5,7 +5,7 @@ div[is="featured-cards"] {
   margin-block: 1rem 0;
 
   & > article[is="feature"] {
-    background-color: hsl(var(--call-out));
+    background-color: hsl(var(--background));
     border-radius: 0.5rem;
     padding: 2rem;
   }

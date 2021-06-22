@@ -1,5 +1,5 @@
 section[is="call-outs"] {
-  background-color: hsl(var(--call-outs));
+  background-color: hsl(var(--backgrounds));
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
