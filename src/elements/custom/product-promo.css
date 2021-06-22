@@ -7,6 +7,7 @@ a[is="product-promo"] {
   grid-gap: 1rem;
   max-inline-size: 40rem;
   padding: 1rem;
+  place-content: start;
   text-decoration: none;
   transition: box-shadow 0.5s ease;
 

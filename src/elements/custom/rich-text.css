@@ -13,7 +13,7 @@ section[is="rich-text"] {
   }
 
   &.alternative {
-    background-color: hsl(var(--section));
+    background-color: hsl(var(--background-secondary));
     margin-block: 2rem 0;
 
     @media (min-width: 40em) {
