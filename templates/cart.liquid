@@ -1,9 +1,7 @@
 <h1>Your cart</h1>
 
-{%- if cart.item_count > 0 -%}
-
-  <form action="/cart" method="post" is="cart">
-
+<form action="/cart" method="post" is="cart">
+  {%- if cart.item_count > 0 -%}
     <table>
       <thead>
         <tr>
@@ -45,15 +43,14 @@
       </tfoot>
     </table>
     <div is="proceed-to-checkout">
-      <div>
-        <button type="submit" name="checkout">Proceed to checkout</button>
-        {% include 'delivery' %}
-      </div>
+      <button type="submit" name="checkout">Proceed to checkout</button>
+      {% include 'delivery' %}
     </div>
-  </form>
 
-{%- else -%}
-  <p>The cart is empty.</p>
-{%- endif -%}
+  {%- else -%}
+    <p>The cart is empty.</p>
+  {%- endif -%}
 
-<p><a href="/pages/shop" is="signpost">Continue shopping</a></p>
+  <p><a href="/pages/shop" is="signpost">Continue shopping</a></p>
+
+</form>

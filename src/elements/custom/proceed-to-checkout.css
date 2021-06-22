@@ -1,18 +1,19 @@
 div[is="proceed-to-checkout"] {
-  & > div {
-    background-color: hsl(var(--product));
-    inset-block-start: 2rem;
-    margin-block-start: 1rem;
-    padding: 1rem;
+  background-color: hsl(var(--background-secondary));
+  padding: 2rem 1rem;
+
+  & > button {
+    inline-size: 100%;
+    max-inline-size: 100%;
+  }
+
+  & > p {
+    margin-block-end: 0;
+  }
+
+  @media (min-width: 40em) {
+    align-self: flex-start;
+    inset-block-start: 1rem;
     position: sticky;
-
-    & > button {
-      inline-size: 100%;
-      max-inline-size: 100%;
-    }
-
-    & > p {
-      margin-block-end: 0;
-    }
   }
 }

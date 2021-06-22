@@ -1,33 +1,59 @@
-article[is="product-promo"] {
-  /* border-block-start: 2px solid hsl(var(--separator)); */
+a[is="product-promo"] {
+  background: hsl(var(--elevated));
+  border: 1px solid hsl(var(--separator));
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px 0 hsl(var(--drop));
+  display: grid;
+  grid-gap: 1rem;
   max-inline-size: 40rem;
+  padding: 1rem;
+  text-decoration: none;
+  transition: box-shadow 0.5s ease;
 
-  & > a {
-    display: grid;
-    grid-gap: 1rem;
-    text-decoration: none;
+  &:active {
+    box-shadow: none;
+    inset-block-start: 2px;
+    position: relative;
+  }
 
-    & > * {
-      margin: 0;
-    }
+  &:hover {
+    box-shadow: 0 4px 8px 0 hsl(var(--drop));
+  }
 
+  &:visited {
     & > h3 {
-      color: hsl(var(--link));
-      order: 2;
+      color: hsl(var(--visited));
+    }
+  }
 
-      &:hover {
-        text-decoration: underline;
-      }
+  &:focus-visible {
+    box-shadow: 0 0 0 3px hsl(var(--focus)), 0 1px 0 0 hsl(var(--drop));
+  }
+
+  & > * {
+    margin: 0;
+  }
+
+  & > h3 {
+    color: hsl(var(--link));
+    order: 2;
+
+    &:hover {
+      text-decoration: underline;
     }
 
-    & > img {
-      order: 1;
+    &:active {
+      color: hsl(var(--active));
     }
+  }
 
-    & > p {
-      color: hsl(var(--text));
-      font-size: 1.17em;
-      order: 3;
-    }
+  & > img {
+    order: 1;
+  }
+
+  & > p {
+    color: hsl(var(--text));
+    font-size: 1.17em;
+    order: 3;
   }
 }
