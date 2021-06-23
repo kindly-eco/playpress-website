@@ -1,7 +1,6 @@
 header[is="header"] {
   align-items: center;
   background-color: hsl(var(--complementary));
-  box-shadow: 0 0 2px 0 hsl(0 0% 0% / 70%);
   display: grid;
   grid-template-columns: 8rem 1fr;
   grid-template-rows: repeat(2, 1fr);

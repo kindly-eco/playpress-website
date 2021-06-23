@@ -1,6 +1,5 @@
 footer[is="footer"] {
   background-color: hsl(var(--complementary));
-  border-block-start: 2px solid hsl(var(--on-complementary-separator));
   color: hsl(var(--on-complementary));
   padding: 1rem;
   position: relative;
@@ -27,6 +26,7 @@ footer[is="footer"] {
     block-size: 4rem;
     border-radius: 50%;
     box-shadow: 0 2px 0 0 hsl(var(--pete-drop));
+    box-shadow: 0 3px 0 rgb(0 0 0 / 20%);
     content: "";
     display: block;
     inline-size: 4rem;

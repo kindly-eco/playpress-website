@@ -85,6 +85,7 @@ template.innerHTML = `
 
   [part="label"]::after {
     background: var(--${NAME}-thumb, transparent);
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.14);
     border-radius: 100%;
     content: "";
     display: block;

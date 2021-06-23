@@ -1,5 +1,6 @@
 div[is="proceed-to-checkout"] {
   background-color: hsl(var(--background-secondary));
+  border-radius: 0.25rem;
   padding: 2rem 1rem;
 
   & > button {

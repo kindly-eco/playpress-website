@@ -376,21 +376,19 @@ button {
   background-color: hsl(var(--accent));
   border: none;
   border-radius: 0.25rem;
-  box-shadow: 0 2px 4px 0 hsl(var(--drop));
+  box-shadow: inset 0 -2px 0 rgb(0 0 0 / 10%);
   color: hsl(var(--on-accent));
   font-family: inherit;
   font-size: inherit;
   font-weight: 700;
   max-inline-size: max-content;
   padding: 0.5rem 1.25rem;
-  transition: box-shadow 0.5s ease;
 
   &:hover {
-    box-shadow: 0 4px 8px 0 hsl(var(--drop));
+    background-color: hsl(var(--accent) / 90%);
   }
 
   &:focus-visible {
-    box-shadow: 0 2px 4px 0 hsl(var(--focus-drop));
     color: hsl(var(--on-focus));
   }
 
@@ -398,6 +396,7 @@ button {
     box-shadow: none;
     inset-block-start: 2px;
     position: relative;
+    transition-duration: 0s;
   }
 }
 

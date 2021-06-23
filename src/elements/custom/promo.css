@@ -2,13 +2,12 @@ a[is="promo"] {
   background: hsl(var(--elevated));
   border: 1px solid hsl(var(--separator));
   border-radius: 0.5rem;
-  box-shadow: 0 2px 4px 0 hsl(var(--drop));
+  box-shadow: 0 2px 0 rgb(0 0 0 / 10%);
   display: grid;
   grid-template-columns: 1fr;
   padding: 0.75rem 1.25rem;
   place-content: start;
   text-decoration: none;
-  transition: box-shadow 0.5s ease;
 
   &:active {
     box-shadow: none;
@@ -16,12 +15,8 @@ a[is="promo"] {
     position: relative;
   }
 
-  &:hover {
-    box-shadow: 0 4px 8px 0 hsl(var(--drop));
-  }
-
   &:focus-visible {
-    box-shadow: 0 2px 4px 0 hsl(var(--drop)), 0 0 0 4px hsl(var(--focus));
+    box-shadow: 0 2px 0 hsl(var(--drop)), 0 0 0 4px hsl(var(--focus));
   }
 
   &:visited {

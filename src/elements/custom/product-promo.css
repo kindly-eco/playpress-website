@@ -1,25 +1,9 @@
 a[is="product-promo"] {
-  background: hsl(var(--elevated));
-  border: 1px solid hsl(var(--separator));
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px 0 hsl(var(--drop));
   display: grid;
   grid-gap: 1rem;
   max-inline-size: 40rem;
-  padding: 1rem;
   place-content: start;
   text-decoration: none;
-  transition: box-shadow 0.5s ease;
-
-  &:active {
-    box-shadow: none;
-    inset-block-start: 2px;
-    position: relative;
-  }
-
-  &:hover {
-    box-shadow: 0 4px 8px 0 hsl(var(--drop));
-  }
 
   &:visited {
     & > h3 {
@@ -28,7 +12,13 @@ a[is="product-promo"] {
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 3px hsl(var(--focus)), 0 1px 0 0 hsl(var(--drop));
+    background: none;
+    box-shadow: none;
+
+    & > h3 {
+      background-color: hsl(var(--focus));
+      box-shadow: 0 0 0 3px hsl(var(--focus));
+    }
   }
 
   & > * {
@@ -49,6 +39,7 @@ a[is="product-promo"] {
   }
 
   & > img {
+    border-radius: 0.5rem;
     order: 1;
   }
 

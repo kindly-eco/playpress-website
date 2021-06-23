@@ -11,6 +11,7 @@ article[is="product"] {
 
   & > form {
     background-color: hsl(var(--background-secondary));
+    border-radius: 0.25rem;
     display: grid;
     grid-gap: 0.75rem;
     grid-template-columns: repeat(2, 1fr);
@@ -19,7 +20,7 @@ article[is="product"] {
     inset-inline: 0;
     margin-block: 0;
     margin-inline: -1rem;
-    padding: 1rem 1rem 0.5rem;
+    padding: 1.5rem 1rem 0.5rem;
     position: sticky;
     z-index: 1;
 
@@ -41,7 +42,7 @@ article[is="product"] {
     @media (min-width: 40em) {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, auto);
-      padding: 1rem;
+      padding: 1.5rem 1rem 2rem;
 
       & > p {
         &:last-of-type {
