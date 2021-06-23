@@ -13,7 +13,7 @@ aside[is="about"] {
   & > div > article {
     background-color: hsl(var(--about-elevated));
     border-radius: 0.5rem;
-    box-shadow: 0 2px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 0 hsl(var(--charcoal-14) / 10%);
 
     & > h4,
     & > h5 {

@@ -1,4 +1,4 @@
-<h1>Your cart</h1>
+<h1>Your cart {%- if cart.item_count == 0 %} is empty.{%- endif -%}</h1>
 
 <form action="/cart" method="post" is="cart">
   {%- if cart.item_count > 0 -%}
@@ -46,9 +46,6 @@
       <button type="submit" name="checkout">Proceed to checkout</button>
       {% include 'delivery' %}
     </div>
-
-  {%- else -%}
-    <p>The cart is empty.</p>
   {%- endif -%}
 
   <p><a href="/pages/shop" is="signpost">Continue shopping</a></p>

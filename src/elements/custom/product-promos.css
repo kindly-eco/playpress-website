@@ -1,10 +1,9 @@
 div[is="product-promos"] {
   display: grid;
   grid-column: auto / span 1;
-  grid-gap: 1.5rem;
+  grid-gap: 3rem 2rem;
   grid-row: 3;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  margin-block: 2rem;
 
   &.two {
     grid-template-columns: 1fr;

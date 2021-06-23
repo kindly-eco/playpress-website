@@ -1,41 +1,42 @@
 section[is="section"] {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
   margin-inline: -1rem;
-  padding: 1.5rem 1rem 2rem;
+  padding-block: 1.5rem;
+  padding-inline: 1rem;
 
-  & > h2,
-  & > p,
-  & > a {
-    grid-column: auto / span 1;
-    justify-self: center;
-    text-align: center;
+  & > div {
+    margin-block: 2rem;
   }
 
-  & > h2 {
-    grid-row: 1;
-  }
-
-  & > p {
-    grid-row: 2;
-  }
-
-  & > a {
-    grid-row: 4;
-    padding-block: 1rem;
+  & > p:last-child {
+    margin-block-start: 2rem;
   }
 
   &.alternative {
     background-color: hsl(var(--background-secondary));
-    margin-block: 1rem;
-
-    @media (min-width: 40em) {
-      margin-inline: -2rem;
-    }
   }
 
   @media (min-width: 40em) {
+    margin-inline: -2rem;
+    padding-block: 3rem;
     padding-inline: 2rem;
+
+    & > h2,
+    & > p {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    & > div {
+      margin-block-start: 4rem;
+    }
+
+    & > p:last-child {
+      margin-block-start: 3rem;
+    }
+  }
+
+  @media (min-width: 60em) {
+    margin-inline: -3rem;
+    padding-inline: 3rem;
   }
 }

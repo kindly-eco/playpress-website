@@ -1,7 +1,5 @@
 article[is="feature"] {
   box-shadow: 0 2px 0 hsl(var(--drop));
-  margin-block: 1rem;
-  max-inline-size: 50rem;
 
   & > img {
     margin-block-end: 1.25rem;

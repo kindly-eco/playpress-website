@@ -1,6 +1,7 @@
 ul[is="breadcrumbs"] {
   display: flex;
   flex-wrap: wrap;
+  margin-block: 2em;
   padding-inline: 1rem;
   position: relative;
   z-index: 2;
@@ -28,10 +29,10 @@ ul[is="breadcrumbs"] {
       );
       content: "";
       inline-size: 0.5rem;
-      inset-block-start: 0.5rem;
+      inset-block-start: 0.25rem;
       margin-inline-end: 0.5rem;
       position: relative;
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateY(-0.125rem);
     }
 
     &:not(:last-of-type) {
@@ -56,7 +57,7 @@ ul[is="breadcrumbs"] {
       &:not(:first-of-type) {
         &::before {
           margin-inline-start: 0.5rem;
-          transform: rotate(0deg);
+          transform: rotate(0deg) translateY(0.25rem);
         }
       }
     }
