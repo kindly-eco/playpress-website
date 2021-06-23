@@ -1,12 +1,10 @@
 a[is="promo"] {
   background: hsl(var(--elevated));
-  block-size: calc(100% - 2rem);
   border: 1px solid hsl(var(--separator));
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px 0 hsl(var(--drop));
   display: grid;
   grid-template-columns: 1fr;
-  max-inline-size: 40rem;
   padding: 0.75rem 1.25rem;
   place-content: start;
   text-decoration: none;
@@ -22,14 +20,14 @@ a[is="promo"] {
     box-shadow: 0 4px 8px 0 hsl(var(--drop));
   }
 
+  &:focus-visible {
+    box-shadow: 0 2px 4px 0 hsl(var(--drop)), 0 0 0 4px hsl(var(--focus));
+  }
+
   &:visited {
     & > h3 {
       color: hsl(var(--visited));
     }
-  }
-
-  &:focus-visible {
-    box-shadow: 0 0 0 3px hsl(var(--focus)), 0 1px 0 0 hsl(var(--drop));
   }
 
   & > img {
@@ -37,16 +35,12 @@ a[is="promo"] {
   }
 
   & > h3 {
-    color: hsl(var(--link));
+    color: unset;
     margin-block-start: 1rem;
     text-decoration: underline;
 
     &:hover {
       text-decoration: none;
-    }
-
-    &:active {
-      color: hsl(var(--active));
     }
   }
 
