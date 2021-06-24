@@ -1,0 +1,6 @@
+div[is="page"] {
+  @media (min-width: 40em) {
+    margin-inline: auto;
+    max-inline-size: 30rem;
+  }
+}

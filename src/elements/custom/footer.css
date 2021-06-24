@@ -9,7 +9,7 @@ footer[is="footer"] {
     color: hsl(var(--on-complementary-link));
 
     &:visited {
-      color: hsl(var(--on-complementary-visited));
+      color: hsl(var(--on-complementary-link));
     }
 
     &:active {

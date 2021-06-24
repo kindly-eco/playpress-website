@@ -1,33 +1,39 @@
 <aside is="about">
-  <article class="primary">
-    <h4>{{ settings.heading_primary | escape }}</h4>
-    <p>
-      {{ settings.text_primary | escape }}
-    </p>
+  <div>
+    <div>
+      <h4>{{ settings.heading_primary | escape }}</h4>
+      <p>
+        {{ settings.text_primary | escape }}
+      </p>
+    </div>
     <img
       is="in-action"
       src="{{ settings.image_primary | img_url : 'master' }}"
-      alt="Hands on play"
-      width="800"
-      height="380"
+      alt="{{ settings.image_primary.img_alt }}"
+      width="900"
+      height="600"
       loading="lazy"
     />
-  </article>
-  <div class="secondary">
-    <article>
+  </div>
+  <div>
+    <div>
       <h5>{{ settings.heading_secondary | escape }}</h5>
       <p>
         {{ settings.text_secondary | escape }}
       </p>
-    </article>
-    <article>
+    </div>
+  </div>
+  <div>
+    <div>
       <h5>{{ settings.heading_tertiary | escape }}</h5>
       <p>
         {{ settings.text_tertiary | escape }}
       </p>
-    </article>
+    </div>
   </div>
   {% if settings.show_link == true %}
-    <a is="signpost" href="{{ settings.link_url | escape }}">{{ settings.link_text | escape }}</a>
+    <p>
+      <a is="signpost" href="{{ settings.link_url | escape }}">{{ settings.link_text | escape }}</a>
+    </p>
   {% endif %}
 </aside>

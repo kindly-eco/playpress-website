@@ -134,7 +134,7 @@
       }
     ],
     "scales/font-weights": [400, 700],
-    "scales/line-heights": [1, 1.2, 1.5, 1.75],
+    "scales/line-heights": [1, 1.3, 1.5, 1.75],
     "scales/radii": [
       {
         "scale": [0.125, 0.25, 0.5, 1, 2, 5],
@@ -144,7 +144,8 @@
     "scales/sizes": [
       {
         "scale": [
-          0.125, 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 5, 6, 8, 10, 40, 30, 50, 80
+          0.125, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4, 5, 6, 8, 10, 40, 30,
+          50, 80
         ],
         "units": ["rem"]
       },
@@ -156,7 +157,8 @@
     "scales/space": [
       {
         "scale": [
-          0.125, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 12, 16
+          0.125, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 2.25, 2.5, 3, 4, 5, 6, 8, 12,
+          16
         ],
         "units": ["rem"]
       },
@@ -178,11 +180,13 @@
     "selector-pseudo-class-allowed-list": [
       "active",
       "checked",
+      "first-child",
       "first-of-type",
       "focus-visible",
       "focus",
       "hover",
       "is",
+      "last-child",
       "last-of-type",
       "not",
       "nth-of-type",

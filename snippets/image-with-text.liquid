@@ -1,4 +1,4 @@
-<section is="image-with-text" {% if section.settings.layout == 'right' %}class="alternative"{% endif %}>
+<section is="image-with-text" class="{% if section.settings.layout == 'right' %}swapped{% endif %}{% if section.settings.show_colour == true %} alternative{% endif %}">
   {% if section.settings.image != blank %}
   <img
     src="{{ section.settings.image | img_url: 'master' }}"
@@ -19,12 +19,14 @@
   {% endif %}
 
   {% if section.settings.link_text != blank %}
-  <a
-    href="{{ section.settings.link_url }}"
-    is="signpost"
-  >
-    {{ section.settings.link_text | escape }}
-  </a>
+    <p>
+      <a
+        href="{{ section.settings.link_url }}"
+        is="signpost"
+      >
+        {{ section.settings.link_text | escape }}
+    </a>
+    </p>
   {% endif %}
 
   </div>

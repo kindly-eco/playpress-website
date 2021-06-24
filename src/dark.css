@@ -4,10 +4,10 @@
   --text-secondary: var(--charcoal-2-5);
   --background: var(--sea-16);
   --background-secondary: var(--sea-14);
-  --elevated: var(--sea-14);
+  --elevated: var(--sea-12);
   --sunken: var(--sea-17);
-  --drop: var(--sea-18);
-  --inset: var(--sea-6);
+  --drop: var(--charcoal-14);
+  --inset: var(--charcoal-1);
   --separator: var(--sea-11);
   --input: var(--sea-6);
   --input-icon: var(--sea-3);
@@ -48,7 +48,7 @@
   --on-hero: var(--charcoal-1);
   --pete: var(--sea-6);
   --pete-drop: var(--sea-16);
-  --about-background: var(--sea-16);
-  --about-elevated: var(--sea-12);
+  --tertiary-background: var(--sea-16);
+  --tertiary-elevated: var(--sea-12);
   --logo-list: var(--charcoal-1);
 }

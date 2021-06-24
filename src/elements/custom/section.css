@@ -1,7 +1,6 @@
 section[is="section"] {
   margin-inline: -1rem;
-  padding-block: 1.5rem;
-  padding-inline: 1rem;
+  padding: 1.5rem 1rem;
 
   & > div {
     margin-block: 2rem;
@@ -17,8 +16,7 @@ section[is="section"] {
 
   @media (min-width: 40em) {
     margin-inline: -2rem;
-    padding-block: 3rem;
-    padding-inline: 2rem;
+    padding: 3rem 2rem;
 
     & > h2,
     & > p {
@@ -26,17 +24,12 @@ section[is="section"] {
       text-align: center;
     }
 
-    & > div {
+    & > div:not(:first-child) {
       margin-block-start: 4rem;
     }
 
     & > p:last-child {
       margin-block-start: 3rem;
     }
-  }
-
-  @media (min-width: 60em) {
-    margin-inline: -3rem;
-    padding-inline: 3rem;
   }
 }

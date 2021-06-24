@@ -4,9 +4,13 @@ div[is="featured-cards"] {
   margin-block: 1rem 0;
 
   & > article[is="feature"] {
-    background-color: hsl(var(--background));
+    background-color: hsl(var(--elevated));
     border-radius: 0.5rem;
-    padding: 1.5rem;
+    padding: 1rem;
+
+    @media (min-width: 60em) {
+      padding: 1.5rem;
+    }
   }
 
   @media (min-width: 40em) {

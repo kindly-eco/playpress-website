@@ -4,9 +4,10 @@
   --text-secondary: var(--charcoal-5);
   --background: var(--sea-1);
   --background-secondary: var(--sea-1-2);
+  --elevated: var(--sea-1);
   --sunken: var(--sea-1-2);
-  --drop: var(--carcoal-14);
-  --inset: var(--carcoal-1);
+  --drop: var(--charcoal-8);
+  --inset: var(--charcoal-1);
   --separator: var(--sea-1-4);
   --input: var(--sea-3);
   --input-icon: var(--sea-6);

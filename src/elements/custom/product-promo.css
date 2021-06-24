@@ -1,51 +1,43 @@
 a[is="product-promo"] {
-  display: grid;
-  grid-gap: 1rem;
   max-inline-size: 40rem;
-  place-content: start;
   text-decoration: none;
 
-  &:visited {
-    & > h3 {
-      color: hsl(var(--visited));
-    }
+  & > img {
+    border-radius: 0.5rem;
   }
 
   &:focus-visible {
     background: none;
     box-shadow: none;
 
+    & > div {
+      & > h3 {
+        background-color: hsl(var(--focus));
+        box-shadow: 0 0 0 3px hsl(var(--focus));
+      }
+    }
+  }
+
+  & > div {
     & > h3 {
-      background-color: hsl(var(--focus));
-      box-shadow: 0 0 0 3px hsl(var(--focus));
-    }
-  }
+      color: hsl(var(--link));
 
-  & > * {
-    margin: 0;
-  }
+      &:active {
+        color: hsl(var(--active));
+      }
 
-  & > h3 {
-    color: hsl(var(--link));
-    order: 2;
+      &:visited {
+        color: hsl(var(--active));
+      }
 
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
-    &:active {
-      color: hsl(var(--active));
+    & > p {
+      color: hsl(var(--text));
+      font-size: 1.17em;
     }
-  }
-
-  & > img {
-    border-radius: 0.5rem;
-    order: 1;
-  }
-
-  & > p {
-    color: hsl(var(--text));
-    font-size: 1.17em;
-    order: 3;
   }
 }

@@ -4,7 +4,7 @@ section[is="intro"] {
   grid-row-gap: 1rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  padding: 0 1rem 1rem;
+  padding: 0 1rem 4rem;
 
   & > div {
     align-self: center;
