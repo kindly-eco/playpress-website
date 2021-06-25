@@ -1,34 +1,31 @@
-<section is="image-with-text" class="{% if section.settings.layout == 'right' %}swapped{% endif %}{% if section.settings.show_colour == true %} alternative{% endif %}">
+<section is="image-with-text" class="{% if section.settings.layout == 'right' %}swapped{% endif %}{% if section.settings.show_colour == true %} alternative{% endif %}{% if section.settings.last_on_page == true %} last{% endif %}">
   {% if section.settings.image != blank %}
-  <img
-    src="{{ section.settings.image | img_url: 'master' }}"
-    alt="{{ section.settings.image.alt | escape }}"
-    is="in-action"
-  />
+    <img
+      src="{{ section.settings.image | img_url: 'master' }}"
+      alt="{{ section.settings.image.alt | escape }}"
+      is="in-action"
+    />
   {% else %}
-  {{ "image" | placeholder_svg_tag: "placeholder-svg" }}
+    {{ "image" | placeholder_svg_tag: "placeholder-svg" }}
   {% endif %}
 
   <div>
-  {% if section.settings.title != blank %}
-    <h3>{{ section.settings.title | escape }}</h3>
-  {% endif %}
+    {% if section.settings.title != blank %}
+      <h3>{{ section.settings.title | escape }}</h3>
+    {% endif %}
 
-  {% if section.settings.text != blank %}
     <p>{{ section.settings.text }}</p>
-  {% endif %}
 
-  {% if section.settings.link_text != blank %}
-    <p>
-      <a
-        href="{{ section.settings.link_url }}"
-        is="signpost"
-      >
-        {{ section.settings.link_text | escape }}
-    </a>
-    </p>
-  {% endif %}
-
+    {% if section.settings.link_text != blank %}
+      <p>
+        <a
+          href="{{ section.settings.link_url }}"
+          is="signpost"
+        >
+          {{ section.settings.link_text | escape }}
+        </a>
+      </p>
+    {% endif %}
   </div>
 
 </section>
