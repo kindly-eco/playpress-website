@@ -3,6 +3,10 @@ div[is="gallery"] {
   grid-gap: 1.5rem;
   margin-block: 1.5rem;
 
+  & > img {
+    border-radius: 0.25rem;
+  }
+
   @media (min-width: 40em) {
     grid-template-columns: repeat(2, 1fr);
   }

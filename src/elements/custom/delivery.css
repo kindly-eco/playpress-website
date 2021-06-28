@@ -13,10 +13,14 @@ p[is="delivery"] {
     border-radius: 0.5rem;
     color: hsl(var(--on-triadic));
     max-inline-size: 100%;
-    padding: 2rem;
+    padding: 1rem;
 
     & > a {
       color: hsl(var(--on-triadic));
+    }
+
+    @media (min-width: 40em) {
+      padding: 2rem;
     }
   }
 }

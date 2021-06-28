@@ -20,7 +20,7 @@ html {
 
 body {
   background-color: hsl(var(--background));
-  box-shadow: 0 8px 8px hsl(var(--drop));
+  box-shadow: 0 8px 8px hsla(0, 0%, 0%, 10%);
   margin: 0 auto;
   max-inline-size: 80rem;
 }
