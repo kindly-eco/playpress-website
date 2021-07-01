@@ -3,7 +3,6 @@ div[is="promos"] {
   grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   margin-block-start: 2rem;
-  margin-inline: -1rem;
 
   &.two {
     grid-template-columns: 1fr;

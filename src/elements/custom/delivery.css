@@ -1,4 +1,6 @@
 p[is="delivery"] {
+  margin-block-start: 2rem;
+
   & > a {
     display: flex;
     margin-block-end: 0;
@@ -12,6 +14,7 @@ p[is="delivery"] {
     background-color: hsl(var(--triadic));
     border-radius: 0.5rem;
     color: hsl(var(--on-triadic));
+    margin-block-start: 1rem;
     max-inline-size: 100%;
     padding: 1rem;
 

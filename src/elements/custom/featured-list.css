@@ -2,13 +2,15 @@ div[is="featured-list"] {
   grid-column: auto / span 1;
   grid-column-gap: 2rem;
   grid-row: 3;
-  margin-block: 1.5rem;
+  margin-block-end: 0;
+  margin-block-start: 3rem;
 
   & > article[is="feature"] {
+    padding-block-end: 2rem;
     text-align: center;
   }
 
-  @media (min-width: 40em) {
+  @media (min-width: 30em) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
@@ -34,6 +36,8 @@ div[is="featured-list"] {
       grid-template-columns: repeat(4, 1fr);
 
       & > article[is="feature"] {
+        padding-block-end: 0;
+
         & > h3 {
           font-size: 1.5em;
         }
@@ -44,6 +48,8 @@ div[is="featured-list"] {
       grid-template-columns: repeat(5, 1fr);
 
       & > article[is="feature"] {
+        padding-block-end: 0;
+
         & > h3 {
           font-size: 1.5em;
         }
