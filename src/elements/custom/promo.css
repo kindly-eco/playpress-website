@@ -1,5 +1,5 @@
 a[is="promo"] {
-  background: hsl(var(--sunken));
+  background: hsl(var(--elevated-secondary));
   border-radius: 0.5rem;
   box-shadow: 0 2px 0 hsl(var(--charcoal-14) / 20%);
   display: grid;

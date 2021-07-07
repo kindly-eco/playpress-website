@@ -1,26 +1,14 @@
 <div
-  class="product-recommendations"
-  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4"
+  data-js="recommendations"
+  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=2"
 >
   {%- if recommendations.performed and recommendations.products_count > 0 -%}
-    <h2>You may also like</h2>
-
-    <ul>
+    <h3>You may also like...</h3>
+    <div is="product-promos" class="two">
       {%- for product in recommendations.products -%}
-        <li class="product">
-          <a href="{{ product.url }}">
-            <img
-              class="product__img"
-              src="{{ product.featured_image | img_url: '300x300' }}"
-              alt="{{ product.featured_image.alt }}"
-            />
-
-            <p class="product__title">{{ product.title }}</p>
-            <p class="product__price">{{ product.price | money}}</p>
-          </a>
-        </li>
+          {% include 'product-promo', product: product %}
       {%- endfor -%}
-    </ul>
+    </div>
   {%- endif -%}
 </div>
 
@@ -37,7 +25,7 @@
       .then(text => {
         const html = document.createElement('div');
         html.innerHTML = text;
-        const recommendations = html.querySelector('.product-recommendations');
+        const recommendations = html.querySelector('[data-js*="recommendations"]');
 
         if (recommendations && recommendations.innerHTML.trim().length) {
           productRecommendationsSection.innerHTML = recommendations.innerHTML;
@@ -48,7 +36,7 @@
       });
   };
 
-  const productRecommendationsSection = document.querySelector('.product-recommendations');
+  const productRecommendationsSection = document.querySelector('[data-js*="recommendations"]');
   const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 200px 0px'});
 
   observer.observe(productRecommendationsSection);

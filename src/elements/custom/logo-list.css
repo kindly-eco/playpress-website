@@ -1,0 +1,48 @@
+section[is="logo-list"] {
+  margin-inline: -1rem;
+  padding: 1.5rem 1rem;
+
+  & > p:last-child {
+    margin-block-start: 2rem;
+  }
+
+  &.alternative {
+    background-color: hsl(var(--background-secondary));
+  }
+
+  & > ul {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    list-style: none;
+    margin-block-start: 3rem;
+    padding-inline-start: 0;
+
+    & > li {
+      background: hsl(var(--logo-list));
+      display: grid;
+      padding: 1rem;
+      place-items: center;
+
+      & > span {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 40em) {
+    margin-inline: -2rem;
+    padding: 3rem 2rem;
+
+    & > h2,
+    & > p {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    & > p:last-child {
+      margin-block-start: 3rem;
+    }
+  }
+}
