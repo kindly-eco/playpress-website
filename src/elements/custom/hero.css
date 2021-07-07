@@ -1,13 +1,48 @@
 section[is="hero"] {
   background-color: hsl(var(--hero));
   margin-inline: -1rem;
+  overflow: hidden;
   padding: 2.5rem 1rem 2rem;
+  position: relative;
+
+  &::before {
+    background-image: linear-gradient(
+        hsl(var(--on-complementary) / 5%) 2px,
+        transparent 2px
+      ),
+      linear-gradient(
+        90deg,
+        hsl(var(--on-complementary) / 5%) 2px,
+        transparent 2px
+      ),
+      linear-gradient(hsl(var(--on-complementary) / 5%) 1px, transparent 1px),
+      linear-gradient(
+        90deg,
+        hsl(var(--on-complementary) / 5%) 1px,
+        transparent 1px
+      );
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    content: "";
+    inset: -3rem;
+    position: absolute;
+    transform: rotate(2.5deg);
+    z-index: 1;
+  }
 
   & > div {
+    position: relative;
+    z-index: 2;
+
     & > h1,
     & > p {
       color: hsl(var(--on-hero));
     }
+  }
+
+  & > img {
+    position: relative;
+    z-index: 2;
   }
 
   @media (min-width: 40em) {
