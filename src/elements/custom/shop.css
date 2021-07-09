@@ -1,0 +1,17 @@
+div[is="shop"] {
+  padding-block-end: 2rem;
+
+  & > section {
+    padding-block-start: 1rem;
+
+    @media (min-width: 40em) {
+      padding-block-start: 2rem;
+
+      & > h2,
+      & > p {
+        margin-inline: auto;
+        text-align: center;
+      }
+    }
+  }
+}

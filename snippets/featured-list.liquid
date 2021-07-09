@@ -52,9 +52,11 @@
   </div>
 
   {% if section.settings.show_signpost_link %}
-      <a is="signpost" href="{{ section.settings.link_url }}">
+      <p>
+        <a is="signpost" href="{{ section.settings.link_url }}">
         {{ section.settings.link_text }}
-      </a>
+        </a>
+      </p>
   {% endif %}
 
 </section>

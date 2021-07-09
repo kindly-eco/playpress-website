@@ -17,9 +17,8 @@
             <img
               src="{{ block.settings.image | img_url: '200x200' }}"
               class="{{ block.settings.image_size }}"
-              alt=""
+              alt="{{ block.settings.image.alt }}"
               loading="lazy"
-
               width="{{block.settings.image.width}}"
               height="{{block.settings.image.height}}"
               />
@@ -28,11 +27,6 @@
           {% endif %}
           {% if block.settings.link != blank %}
             </a>
-          {% endif %}
-          {% if block.settings.logo_text != blank %}
-              <span {% if block.settings.show_logo_text == false %} class="visually-hidden"{% endif %}>
-                {{ block.settings.logo_text }}
-              </span>
           {% endif %}
         </li>
       {% endfor %}

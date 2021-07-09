@@ -1,25 +1,33 @@
-<h1>Shop our playsets</h1>
-<div is="shop-intro">
-  <p is="lede"> Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away! </p>
-  {% include 'delivery', expanded: 'true' %}
-</div>
-<h2>Our best-selling sets</h2>
-<div is="product-promos" class="two">
-  {% for product in collections['best-sellers'].products limit: 2 %}
-      {% include 'product-promo', product: product %}
-  {% endfor %}
-</div>
-<h2>Our other execellent sets</h2>
-<div is="product-promos" class="three">
-  {% for product in collections['shop-featured'].products limit: 9 %}
-      {% include 'product-promo', product: product %}
-  {% endfor %}
-</div>
-<h2>Bundles</h2>
-<p>Even better value to build a Playpress universe.</p>
-<div is="product-promos" class="two">
-  {% for product in collections['bundle-playsets'].products limit: 2 %}
-      {% include 'product-promo', product: product %}
-  {% endfor %}
+<div is="shop">
+  <h1>Shop our playsets</h1>
+  <div is="shop-intro">
+    <p is="lede"> Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away! </p>
+    {% include 'delivery', expanded: 'true' %}
+  </div>
+  <section>
+  <h2>Our best-selling sets</h2>
+    <div is="product-promos" class="two">
+      {% for product in collections['best-sellers'].products limit: 2 %}
+          {% include 'product-promo', product: product %}
+      {% endfor %}
+    </div>
+  </section>
+  <section>
+    <h2>Our other execellent sets</h2>
+    <div is="product-promos" class="three">
+      {% for product in collections['shop-featured'].products limit: 9 %}
+          {% include 'product-promo', product: product %}
+      {% endfor %}
+    </div>
+  </section>
+  <section>
+    <h2>Bundles</h2>
+    <p>Even better value to build a Playpress universe.</p>
+    <div is="product-promos" class="two">
+      {% for product in collections['bundle-playsets'].products limit: 2 %}
+          {% include 'product-promo', product: product %}
+      {% endfor %}
+    </div>
+  </section>
 </div>
 {% include 'about-brand' %}
