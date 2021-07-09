@@ -10,7 +10,10 @@ main[is="shop"] {
       display: grid;
       grid-column-gap: 2rem;
       grid-template-columns: 1fr 1fr;
-      justify-items: end;
+
+      & > div {
+        justify-self: end;
+      }
     }
   }
 

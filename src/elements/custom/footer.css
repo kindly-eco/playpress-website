@@ -53,16 +53,16 @@ footer[is="footer"] {
         }
       }
     }
-  }
 
-  & > ul[is="social-links"] {
-    & > li {
-      & > a {
-        align-items: center;
-        display: flex;
+    &:last-of-type {
+      & > li {
+        & > a {
+          align-items: center;
+          display: flex;
 
-        & > svg {
-          margin-inline-end: 0.5rem;
+          & > svg {
+            margin-inline-end: 0.5rem;
+          }
         }
       }
     }

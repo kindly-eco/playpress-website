@@ -22,7 +22,7 @@ body {
   background-color: hsl(var(--background));
   box-shadow: 0 8px 8px hsl(var(--drop) / 10%);
   margin: 0 auto;
-  max-inline-size: 80rem;
+  max-inline-size: 72rem;
   padding: 1rem;
 
   @media (min-width: 40em) {

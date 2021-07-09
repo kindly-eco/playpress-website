@@ -3,13 +3,13 @@ div[is="featured-cards"] {
   grid-gap: 2rem;
   margin-block: 3rem 0;
 
-  & > article[is="feature"] {
+  & > article {
     background-color: hsl(var(--elevated));
     border-radius: 0.5rem;
     box-shadow: 0 2px 0 hsl(var(--drop) / 10%);
     padding: 1rem;
 
-    @media (min-width: 60em) {
+    @media (min-width: 40em) {
       padding: 1.5rem;
     }
   }

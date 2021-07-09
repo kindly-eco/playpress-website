@@ -14,7 +14,7 @@
   {{ section.settings.feedback_text }}
 
   {%- if section.blocks.size > 0 -%}
-    <ul is="social-links">
+    <ul>
       {%- for block in section.blocks -%}
         <li {{ block.shopify_attributes }}>
           {%- if block.settings.link_text != blank -%}

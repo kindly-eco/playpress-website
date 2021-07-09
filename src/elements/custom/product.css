@@ -16,7 +16,6 @@ main[is="product"] {
     display: grid;
     grid-gap: 0.75rem;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto);
     inset-block-start: 0;
     inset-inline: 0;
     margin-block: 0;
@@ -25,12 +24,12 @@ main[is="product"] {
     position: sticky;
     z-index: 1;
 
-    & > p[is="lede"],
+    & > p,
     & > button {
       grid-row: 2;
     }
 
-    & > p[is="delivery"] {
+    & > div {
       grid-column: 1 / span 2;
       grid-row: 1;
       margin-block-end: 0.5rem;
@@ -72,7 +71,7 @@ main[is="product"] {
       margin-inline: 0;
       padding: 2rem;
 
-      & > p[is="lede"] {
+      & > p {
         grid-row: 1;
         margin-block: 0;
       }
@@ -84,7 +83,7 @@ main[is="product"] {
         padding-block: 1rem;
       }
 
-      & > p[is="delivery"] {
+      & > div {
         grid-row: 3;
         margin-block-start: 1rem;
       }
