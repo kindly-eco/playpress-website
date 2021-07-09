@@ -20,6 +20,10 @@ main[is="cart"] {
               }
             }
 
+            & > label {
+              display: none;
+            }
+
             & > input {
               inline-size: 1.5rem;
             }

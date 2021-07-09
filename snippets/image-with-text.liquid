@@ -4,6 +4,9 @@
       src="{{ section.settings.image | img_url: 'master' }}"
       alt="{{ section.settings.image.alt | escape }}"
       is="in-action"
+      loading="lazy"
+      width="{{section.settings.image.width}}"
+      height="{{section.settings.image.height}}"
     />
   {% else %}
     {{ "image" | placeholder_svg_tag: "placeholder-svg" }}
