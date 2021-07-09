@@ -1,5 +1,5 @@
 main[is="cart"] {
-  margin-block-end: 4rem;
+  margin-block-end: 5rem;
 
   & > form {
     display: grid;
@@ -87,6 +87,6 @@ main[is="cart"] {
   }
 
   & > p {
-    margin-block-start: 2em;
+    margin-block-start: 2.5em;
   }
 }
