@@ -1,6 +1,7 @@
 footer[is="footer"] {
   background-color: hsl(var(--complementary));
   color: hsl(var(--on-complementary));
+  margin: 0 -1rem -1rem;
   padding: 1rem;
   position: relative;
 
@@ -78,8 +79,8 @@ footer[is="footer"] {
   }
 
   @media (min-width: 40em) {
-    padding-block: 2rem;
-    padding-inline: 2rem;
+    margin: 0 -2rem -2rem;
+    padding: 2rem;
 
     & > p:first-of-type {
       margin-block-start: 2.5em;

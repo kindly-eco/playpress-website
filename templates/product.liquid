@@ -1,4 +1,4 @@
-<article is="product">
+<main is="product">
   <h1>{{ product.title }}</h1>
   <img
     alt="{{ product.featured_image.alt | escape }}"
@@ -65,6 +65,5 @@
       </a>
     </li>
   </ul>
-
-  {% section 'product-recommendations' %}
-</article>
+</main>
+{% section 'product-recommendations' %}

@@ -1,5 +1,5 @@
-article[is="product"] {
-  margin-block-start: 2rem;
+main[is="product"] {
+  margin-block: 2rem 4rem;
 
   & > h1 {
     margin-block-start: 0;

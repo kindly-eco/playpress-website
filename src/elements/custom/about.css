@@ -3,7 +3,7 @@ aside[is="about"] {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-  margin: 0 -1rem -5rem;
+  margin: 0 -1rem;
   padding: 3rem 1rem 4rem;
 
   & > div {
@@ -84,6 +84,11 @@ aside[is="about"] {
     }
   }
 
+  & > p {
+    margin-inline: auto;
+    text-align: center;
+  }
+
   @media (min-width: 40em) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -101,8 +106,6 @@ aside[is="about"] {
 
     & > p {
       grid-column: 1 / span 2;
-      margin-inline: auto;
-      text-align: center;
     }
   }
 }

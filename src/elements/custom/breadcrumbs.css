@@ -2,7 +2,7 @@ ul[is="breadcrumbs"] {
   display: flex;
   flex-wrap: wrap;
   margin-block: 2em;
-  padding-inline: 1rem;
+  padding-inline-start: 0;
   position: relative;
   z-index: 2;
 
@@ -61,9 +61,5 @@ ul[is="breadcrumbs"] {
         }
       }
     }
-  }
-
-  @media (min-width: 40em) {
-    padding-inline: 2rem;
   }
 }

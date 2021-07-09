@@ -4,7 +4,7 @@ header[is="header"] {
   display: grid;
   grid-template-columns: 8rem 1fr;
   grid-template-rows: repeat(2, 1fr);
-  margin-inline: auto;
+  margin: -1rem -1rem 0;
   position: relative;
   z-index: 1;
 
@@ -68,6 +68,10 @@ header[is="header"] {
         background-color: hsl(var(--complementary-hover));
       }
     }
+  }
+
+  @media (min-width: 40em) {
+    margin: -2rem -2rem 0;
   }
 
   @media (min-width: 44em) {

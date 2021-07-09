@@ -9,8 +9,7 @@ section[is="image-with-text"] {
   }
 
   &.last {
-    margin-block-end: -5rem;
-    padding-block-end: 5rem;
+    padding-block-end: 4rem;
   }
 
   &.alternative {

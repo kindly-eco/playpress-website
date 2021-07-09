@@ -1,5 +1,18 @@
-div[is="shop"] {
-  padding-block-end: 2rem;
+main[is="shop"] {
+  margin-block-end: 2rem;
+
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: start;
+
+    @media (min-width: 40em) {
+      display: grid;
+      grid-column-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      justify-items: end;
+    }
+  }
 
   & > section {
     padding-block-start: 1rem;
