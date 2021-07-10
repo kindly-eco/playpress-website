@@ -45,7 +45,7 @@ main[is="cart"] {
       }
 
       & > p {
-        margin-block-end: 0;
+        margin-block: 1.25em 0;
       }
     }
 

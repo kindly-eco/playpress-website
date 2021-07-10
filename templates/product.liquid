@@ -7,7 +7,7 @@
     height="750"
   >
   {% form 'product', product %}
-    <p is="lede">{{ product.price | money }}</p>
+    <p>{{ product.price | money }}</p>
     <select name="id" hidden>
       {%- for variant in product.variants -%}
         <option selected="selected" value="{{ variant.id }}"></option>

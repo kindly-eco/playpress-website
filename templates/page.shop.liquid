@@ -1,7 +1,7 @@
 <main is="shop">
   <h1>Shop our playsets</h1>
   <div>
-    <p is="lede"> Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away! </p>
+    <p is="lede">Our eco-friendly playsets are affordable and fun, time and time again. Just press, play and away!</p>
     <div>
       {% include 'delivery', expanded: 'true' %}
     </div>
@@ -15,9 +15,9 @@
     </div>
   </section>
   <section>
-    <h2>Our other execellent sets</h2>
+    <h2>Our other excellent sets</h2>
     <div is="product-promos" class="three">
-      {% for product in collections['shop-featured'].products limit: 9 %}
+      {% for product in collections['shop-featured'].products %}
           {% include 'product-promo', product: product %}
       {% endfor %}
     </div>

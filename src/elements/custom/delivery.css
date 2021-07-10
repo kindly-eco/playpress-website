@@ -14,9 +14,8 @@ p[is="delivery"] {
     background-color: hsl(var(--triadic));
     border-radius: 0.5rem;
     color: hsl(var(--on-triadic));
-    margin-block-start: 1rem;
     max-inline-size: 100%;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
 
     & > a {
       color: hsl(var(--on-triadic));
