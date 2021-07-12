@@ -1,4 +1,4 @@
-<main is="cart">
+<main id="main" is="cart">
   <h1>Your cart {%- if cart.item_count == 0 %} is empty.{%- endif -%}</h1>
   <form action="/cart" method="post">
     {%- if cart.item_count > 0 -%}

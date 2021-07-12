@@ -6,15 +6,27 @@ footer[is="footer"] {
   position: relative;
 
   /* stylelint-disable-next-line selector-combinator-allowed-list */
-  & a:not(:focus-visible) {
+  & a {
     color: hsl(var(--on-complementary-link));
 
     &:visited {
-      color: hsl(var(--on-complementary-link));
+      color: hsl(var(--on-complementary-visited));
     }
 
     &:active {
       color: hsl(var(--on-complementary-active));
+    }
+
+    &:focus-visible {
+      color: hsl(var(--on-focus-link));
+
+      &:visited {
+        color: hsl(var(--on-focus-visited));
+      }
+
+      &:active {
+        color: hsl(var(--on-focus-active));
+      }
     }
   }
 
