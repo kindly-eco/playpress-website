@@ -19,13 +19,14 @@ section[is="logo-list"] {
     display: grid;
     grid-auto-rows: 1fr;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     list-style: none;
     margin-block-start: 3rem;
     padding-inline-start: 0;
 
     & > li {
       background: hsl(var(--logo-list));
+      border-radius: 0.5rem;
       display: grid;
       padding: 1rem;
       place-items: center;

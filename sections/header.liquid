@@ -97,7 +97,6 @@
       {% for link in linklists.main-menu.links %}
           <li {% if link.active %} class="on"{% endif %}>
             <a href="{{ link.url }}"
-              class="{% if link.active %} active{% endif %}"
               {% if link.current %} aria-current="page"{% endif %}
             >{{ link.title }}
             </a>
