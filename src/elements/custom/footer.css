@@ -108,11 +108,4 @@ footer[is="footer"] {
       }
     }
   }
-
-  @media (min-width: 64em) {
-    background-image: url("footer.webp");
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 40%;
-  }
 }
