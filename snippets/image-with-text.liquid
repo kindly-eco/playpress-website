@@ -1,7 +1,7 @@
 <section is="image-with-text" class="{% if section.settings.layout == 'right' %}swapped{% endif %}{% if section.settings.show_colour == true %} alternative{% endif %}{% if section.settings.last_on_page == true %} last{% endif %}">
   {% if section.settings.image != blank %}
     <img
-      src="{{ section.settings.image | img_url: 'master' }}"
+      src="{{ section.settings.image | img_url: '800x' }}"
       alt="{{ section.settings.image.alt | escape }}"
       is="in-action"
       loading="lazy"
